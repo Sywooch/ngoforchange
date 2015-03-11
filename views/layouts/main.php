@@ -42,26 +42,18 @@ AppAsset::register($this);
                 array_push($items, [
                     'label' => 'Entries',
                     'items' => [
-                        ['label' => 'Patients', 'url' => ['/patients']],
-                        ['label' => 'Volunteers', 'url' => ['/volunteers']],
-                        ['label' => 'Friends', 'url' => ['/friends']],
-                        ['label' => 'Officials', 'url' => ['/officials']],
+                        ['label' => 'People', 'url' => ['/people']],
                         ['label' => 'Medicines', 'url' => ['/medicines']],
                         ['label' => 'Events', 'url' => ['/events']],
-                        ['label' => 'Elections', 'url' => ['/elections']],
                         ['label' => 'Invoices', 'url' => ['/invoices']]
                     ]]);
                 array_push($items, [
                     'label' => 'Reports',
                     'items' => [
-                        ['label' => 'Patients', 'url' => ['/report/all']],
-                        ['label' => 'Volunteers', 'url' => ['/report/all']],
-                        ['label' => 'Friends', 'url' => ['/report/all']],
-                        ['label' => 'Officials', 'url' => ['/report/all']],
-                        ['label' => 'Medicines', 'url' => ['/report/all']],
-                        ['label' => 'Events', 'url' => ['/report/all']],
-                        ['label' => 'Elections', 'url' => ['/report/all']],
-                        ['label' => 'Invoices', 'url' => ['/report/all']]
+                        ['label' => 'Activity', 'url' => ['/report/activity']],
+                        ['label' => 'Data Integrity', 'url' => ['/report/dataintegrity']],
+                        ['label' => 'Invoices', 'url' => ['/report/invoices']],
+                        ['label' => 'Medicines Usage', 'url' => ['/report/all']]
                     ]]);
                 array_push($items, [
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',

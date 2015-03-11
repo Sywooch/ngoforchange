@@ -22,67 +22,29 @@ $this->title .= 'Welcome EENOSIMS';
             <div class="col-xs-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Entries</h3>
+                        <h3 class="panel-title">People</h3>
                     </div>
                     <div class="panel-body">
-                        <h4>Medicines</h4>
-                        <div><a herf="">View stock</a></div>
-                        <div><a href="">Medicines</a></div>
-                        <div><a href="">Medicines Transfers</a></div>
-                        <h4>Invoices</h4>
-                        <div><a herf="">Current balance</a></div>
-                        <div><a herf="">Balance report</a></div>
-                        <div><a herf="">Receipts</a></div>
-                        <div><a herf="">Payments</a></div>
+                        <div><a href="">All persons</a></div>
+                        <div><a href="">Patients</a></div>
+                        <div><a href="">Volunteers</a></div>
+                        <div><a href="">Friends</a></div>
+                        <div><a href="">Officials</a></div>
                     </div>
-                    <div class="panel-footer">Panel footer</div>
+                    <div class="panel-footer">&nbsp;</div>
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Patients</h3>
+                        <h3 class="panel-title">Medicines</h3>
                     </div>
                     <div class="panel-body">
-                        <div>View all</div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div><a href="">All medicines</a></div>
+                        <div><a href="">Medicines movements</a></div>
+                        <div><a herf="">Medicines store</a></div>
                     </div>
-                    <div class="panel-footer">Panel footer</div>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Friends</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                    <div class="panel-footer">Panel footer</div>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Officials</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                    <div class="panel-footer">Panel footer</div>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Volunteers</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                    <div class="panel-footer">Panel footer</div>
+                    <div class="panel-footer">&nbsp;</div>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -91,20 +53,24 @@ $this->title .= 'Welcome EENOSIMS';
                         <h3 class="panel-title">Events</h3>
                     </div>
                     <div class="panel-body">
-                        Panel content
+                        <div><a herf="">Elections</a></div>
+                        <div><a herf="">Promotions</a></div>
                     </div>
-                    <div class="panel-footer">Panel footer</div>
+                    <div class="panel-footer">&nbsp;</div>
                 </div>
             </div>
             <div class="col-xs-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Elections</h3>
+                        <h3 class="panel-title">Invoices</h3>
                     </div>
                     <div class="panel-body">
-                        Panel content
+                        <div><a herf="">Cash receipts</a></div>
+                        <div><a herf="">Payment receipts</a></div>
+                        <div><a herf="">Good receipts</a></div>
+                        <div><a herf="">Current Balance</a></div>
                     </div>
-                    <div class="panel-footer">Panel footer</div>
+                    <div class="panel-footer">&nbsp;</div>
                 </div>
             </div>
         </div>

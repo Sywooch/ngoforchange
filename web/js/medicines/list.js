@@ -16,23 +16,23 @@
     $("#mainGrid").kendoGrid({
         dataSource: {
             transport: {
+                create: {
+                    url: links.grid_create,
+                    type: "POST",
+                    dataType: "json"
+                },
                 read: {
                     url: links.grid_read,
                     type: "GET",
                     dataType: "json"
                 },
                 update: {
-                    url: links.grid_read,
+                    url: links.grid_update,
                     type: "POST",
                     dataType: "json"
                 },
                 destroy: {
-                    url: links.grid_read,
-                    type: "POST",
-                    dataType: "json"
-                },
-                create: {
-                    url: links.grid_create,
+                    url: links.grid_destroy,
                     type: "POST",
                     dataType: "json"
                 },
@@ -63,7 +63,12 @@
             batch: true,
             pageSize: 20
         },
-        editable: "popup",
+        editable: {
+            mode: "popup",
+            createAt: "bottom",
+            confirmation: labels.grid_confirm_delete,
+            confirmDelete: "Yes"
+        },
         toolbar: [{
             name: "create",
             text: labels.newbutton

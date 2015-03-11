@@ -16,12 +16,15 @@ var labels = {
 	"grid_column_name": "<?php echo Yii::t('app', 'Medicine Name'); ?>",
 	"grid_column_unit": "<?php echo Yii::t('app', 'Unit'); ?>",
 	"grid_column_details": "<?php echo Yii::t('app', 'Details'); ?>",
+
+	"grid_confirm_delete": "<?php echo Yii::t('app', 'Are you sure that you want to delete this record?'); ?>"
 };
 
 var links = {
-	"grid_read": "?r=api/medicines",
-
 	"grid_create": "?r=api/medcreate",
+	"grid_read": "?r=api/medicines",
+	"grid_update": "?r=api/medupdate",
+	"grid_destroy": "?r=api/meddestroy",
 };
 </script>
 

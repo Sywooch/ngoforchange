@@ -57,7 +57,23 @@ class ApiController extends Controller
 
     public function actionMedupdate()
     {
+        $input = json_decode(file_get_contents("php://input"));
+        $response = [];
+        foreach($input as $key => $value) {
+            if($value->id == null || $value->id == '')
+                continue;
 
+            $med = Medicines::findOne($value->id);
+            $med->name = $value->name;
+            $med->unit_type = $value->unit_type;
+            $med->details = $value->details;
+
+            $med->update();
+            array_push($response, $med->attributes);
+        }
+
+        Yii::$app->response->format = 'json';
+        return self::defaultResponse(200, false, $response);
     }
 
     public function actionMedcreate()
@@ -66,21 +82,39 @@ class ApiController extends Controller
         $response = [];
         foreach($input as $key => $value) {
             $med = new Medicines();
-            $med->setAttributes($value);
-            $med->setAttribute('id', null);
+            $med->setAttributes([
+                'name' => $value->name,
+                'unit_type' => $value->unit_type,
+                'details' => $value->details
+                ]);
 
             $med->save();
-            $the_id = $med->id;
-            var_dump($the_id);
+            array_push($response, $med->attributes);
         }
 
         Yii::$app->response->format = 'json';
         return self::defaultResponse(200, false, $response);
     }
 
-    public function actionMeddelete()
+    public function actionMeddestroy()
     {
+        $input = json_decode(file_get_contents("php://input"));
+        $response = [];
+        foreach($input as $key => $value) {
+            if($value->id == null || $value->id == '')
+                continue;
 
+            $med = Medicines::findOne($value->id);
+            $med->name = $value->name;
+            $med->unit_type = $value->unit_type;
+            $med->details = $value->details;
+
+            if($med->delete() > 0)
+                array_push($response, $med->attributes);
+        }
+
+        Yii::$app->response->format = 'json';
+        return self::defaultResponse(200, false, $response);
     }
 
     public function actionMedmoves()
@@ -109,6 +143,23 @@ class ApiController extends Controller
 
         $command = Yii::$app->db->createCommand($sql, [':medicine_id' => $medicine_id]);
         $moves = $command->queryAll();
+
+        /*
+            // Medcine List
+        $id = '';
+        if(isset($_GET['id']) && $_GET['id'] != "")
+            $id = $_GET['id'];
+
+        $medicines = [];
+
+        if($id == '')
+            $medicines = Medicines::find()->all();
+        else
+            $medicines = Medicines::findAll($id);
+
+        Yii::$app->response->format = 'json';
+        return self::defaultResponse(200, false, $medicines);
+        */
         Yii::$app->response->format = 'json';
         return self::defaultResponse(200, false, $moves);
     }

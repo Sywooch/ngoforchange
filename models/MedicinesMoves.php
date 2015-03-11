@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 use yii\db\ActiveRecord;
 
-class Medicines extends ActiveRecord
+class MedicinesMoves extends ActiveRecord
 {
 	
     public static function model($className=__CLASS__)
@@ -15,16 +15,7 @@ class Medicines extends ActiveRecord
  
     public static function tableName()
     {
-        return 'medicines';
-    }
-
-    public function rules()
-    {
-        return [
-            [['id'], 'integer'],
-            [['name', 'unit_type'], 'required'],
-            [['name', 'unit_type', 'details'], 'string']
-        ];
+        return 'medicines_movement';
     }
 
     public function serialize()
