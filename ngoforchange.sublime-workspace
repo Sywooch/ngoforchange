@@ -3,25 +3,130 @@
 	{
 		"selected_items":
 		[
+			[
+				"gri",
+				"grid_read"
+			],
+			[
+				"noti",
+				"notifs_message"
+			],
+			[
+				"count",
+				"count_stock"
+			],
+			[
+				"not",
+				"notifs_format"
+			],
+			[
+				"alert",
+				"alertMsg"
+			],
+			[
+				"wan",
+				"warnMsg"
+			],
+			[
+				"aler",
+				"alertMsg"
+			],
+			[
+				"notifs",
+				"notifs_success"
+			],
+			[
+				"wit",
+				"width"
+			],
+			[
+				"fi",
+				"filterable"
+			],
+			[
+				"med",
+				"medicine_id"
+			],
+			[
+				"s",
+				"statusCode"
+			],
+			[
+				"stat",
+				"statusText"
+			],
+			[
+				"status",
+				"statusText"
+			],
+			[
+				"con",
+				"condition"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "views/medicines/list.php",
+			"settings":
+			{
+				"buffer_size": 760,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "web/js/medicines/list.js",
+			"settings":
+			{
+				"buffer_size": 3211,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/ApiController.php",
+			"settings":
+			{
+				"buffer_size": 5984,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/Medicines.php",
+			"settings":
+			{
+				"buffer_size": 1252,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 81.0,
 		"selected_items":
 		[
+			[
+				"Package Control: Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 416.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 126.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -35,19 +140,91 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange"
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines"
 	],
 	"file_history":
 	[
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/wrappers/php/grid/editing.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/store.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines/store.js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/messages/gr_GR/app.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/MedicinesController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/js/kendo.all.min.js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/ApiController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/list.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/moves.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/MedicinesMoves.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/Medicines.php",
+		"/C/Users/ShaderZAK/Downloads/eenosims-2015-03-07.sql",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines/list.js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/layouts/main.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/entries/medicines.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/all.js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/KendoAsset.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/EntriesController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/AppAsset.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines.js",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.mobile.min.css",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.min.css",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/commands/HelloController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/web.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/console.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/links.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/grid/toolbar-template.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/grid/sorting.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/sitemap.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/SiteController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/params.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/messages/gr/core.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/db.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/Medicine.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/ReportController.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/ApiController",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/ContactForm.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/about.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/report/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/report.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/User.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/login.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/LoginForm.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/api.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/events.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/images.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/css/site.css",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/keyboard-navigation.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/right-to-left-support.php",
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/index.php",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/LICENSE.md",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/README (2).md",
+		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/web/index.php",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/yii.bat",
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/index.php",
+		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-access.log",
+		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-error.log",
+		"/C/wamp/bin/apache/apache2.4.9/logs/install.log",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -57,6 +234,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fr",
+			"woff",
+			"kendoui",
+			"font",
+			"default",
+			"directory",
+			"vhost"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -64,6 +248,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -74,18 +259,138 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "views/medicines/list.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								697,
+								697
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "web/js/medicines/list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1205,
+								1205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 428.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/ApiController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1828,
+								1828
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 679.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "models/Medicines.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -117,7 +422,7 @@
 	"project": "ngoforchange.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -152,7 +457,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
