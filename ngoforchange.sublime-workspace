@@ -67,38 +67,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "views/medicines/list.php",
-			"settings":
-			{
-				"buffer_size": 760,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "web/js/medicines/list.js",
-			"settings":
-			{
-				"buffer_size": 3211,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "controllers/ApiController.php",
-			"settings":
-			{
-				"buffer_size": 5984,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "models/Medicines.php",
-			"settings":
-			{
-				"buffer_size": 1252,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -140,18 +108,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines"
+		"/C/Projects_Git_ShaderZAK/ngoforchange"
 	],
 	"file_history":
 	[
+		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/list.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/ApiController.php",
+		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/wrappers/php/grid/editing.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/store.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines/store.js",
@@ -208,19 +176,16 @@
 		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/index.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/LICENSE.md",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/README (2).md",
-		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/web/index.php",
-		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/yii.bat",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/index.php",
 		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-access.log",
 		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-error.log",
-		"/C/wamp/bin/apache/apache2.4.9/logs/install.log",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md"
+		"/C/wamp/bin/apache/apache2.4.9/logs/install.log"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -259,128 +224,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "views/medicines/list.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								697,
-								697
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "web/js/medicines/list.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1205,
-								1205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 428.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "controllers/ApiController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1828,
-								1828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 679.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "models/Medicines.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								462,
-								462
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
