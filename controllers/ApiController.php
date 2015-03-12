@@ -11,29 +11,7 @@ use app\models\MedicinesMoves;
 
 class ApiController extends Controller
 {
-    /**
-        static member to form default response
-    */
-    public static function defaultResponse($statusCode, $hasError, $data)
-    {
-        $statusText = 'OK';
-        switch ($statusCode) {
-            case 200: $statusText = 'OK'; break;
-            case 403: $statusText = 'Forbidden'; break;
-            case 404: $statusText = 'Not Found'; break;
-            case 500: $statusText = 'Internal Server Error'; break;
-        }
-
-        $header = 'HTTP/1.1 '. $statusCode .' '. $statusText;
-        header($header, true);
-
-        $response = [
-            'error' => $hasError ? '1' : '0',
-            'status' => $statusCode,
-            'body' => $data
-        ];
-        return $response;
-    }
+    
     /**
         Medicine Functionality
     */

@@ -1,6 +1,7 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
+$modules = require(__DIR__ . '/modules.php');
 
 $config = [
     'id' => 'basic',
@@ -8,6 +9,7 @@ $config = [
     'name' => 'EENOSIMS',
     'language' => 'gr_GR',
     'bootstrap' => ['log'],
+    'modules' => $modules,
     'components' => [
         'request' => [
             'cookieValidationKey' => 'eenosims_secret_world',

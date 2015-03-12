@@ -108,16 +108,29 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange"
+		"/C/Projects_Git_ShaderZAK/ngoforchange",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines"
 	],
 	"file_history":
 	[
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/ApiController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/MedicinesMoves.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/moves.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/list.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/list.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/ApiController.php",
 		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
 		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/wrappers/php/grid/editing.php",
@@ -185,7 +198,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -302,7 +315,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 228.0,
+	"side_bar_width": 197.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
