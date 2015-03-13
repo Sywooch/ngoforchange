@@ -8,7 +8,11 @@
                     read: {
                         url: links.grid_details_read,
                         type: "GET",
-                        dataType: "json"
+                        dataType: "json",
+                        data: {
+                            'medicine_id': e.data.medicines_id,
+                            'expiration_date': e.data.expiration_date
+                        }
                     }
                 },
                 schema: {
@@ -47,9 +51,13 @@
                 title: labels.grid_details_count,
                 width: 30
             }, {
-                field: "donator",
-                titie: labels.grid_details_donator,
-                width: 100
+                field: "person.first_name",
+                title: labels.grid_details_fname,
+                width: 50
+            }, {
+                field: "person.last_name",
+                title: labels.grid_details_lname,
+                width: 50
             }, {
                 field: "movement_reason",
                 title: labels.grid_details_movreason,
@@ -111,20 +119,20 @@
             }
         },
         columns: [{
-            field: "medicine_id",
+            field: "medicines.id",
             title: labels.grid_column_id,
             filterable: false,
             width: 50
         }, {
-            field: "name",
+            field: "medicines.name",
             title: labels.grid_column_name,
             width: 150
         }, {
-            field: "unit_type",
+            field: "medicines.unit_type",
             title: labels.grid_column_unit,
             width: 70
         }, {
-            field: "details",
+            field: "medicines.details",
             title: labels.grid_column_details,
             width: 150
         }, {
@@ -146,7 +154,7 @@
         html += labels.notifs_message + ' - ';
         for (var i in items) {
             html +=
-                '' + items[i].name +
+                '' + (items[i].medicines ? items[i].medicines.name : '') +
                 ' (' + labels.notifs_message_expiration +
                 ' ' + items[i].expiration_date + '), ';
         }

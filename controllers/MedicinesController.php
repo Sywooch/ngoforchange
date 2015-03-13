@@ -15,9 +15,9 @@ class MedicinesController extends Controller
 		return $this->render('index');
 	}
 
-    public function actionList()
+    public function actionAll()
     {
-        return $this->render('list');
+        return $this->render('all');
     }
 
     public function actionStore()

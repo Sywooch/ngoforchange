@@ -1,7 +1,7 @@
 <?php
-	$this->title = "Medicines Movements";
+	$this->title = 'Medicines';
 	$this->registerJsFile(
-		'js/medicines/moves.js',
+		'js/medicines/all.js',
 		[
 			'position' => yii\web\View::POS_END,
 			'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']
@@ -21,11 +21,13 @@ var labels = {
 };
 
 var links = {
-	"grid_create": "?r=api/medicines/move",
-	"grid_read": "?r=api/medicines/moves"
+	"grid_create": "?r=api/medicines/create",
+	"grid_read": "?r=api/medicines",
+	"grid_update": "?r=api/medicines/update",
+	"grid_destroy": "?r=api/medicines/destroy",
 };
 </script>
 
-<h3>Medicines - Movements</h3>
+<h3>Medicines</h3>
 <div id="mainGrid">
 </div>

@@ -23,9 +23,9 @@ class KendoAsset extends AssetBundle
     ];
     public $css = [
     	'styles/kendo.common.min.css',
-    	'styles/kendo.material.min.css',
+    	'styles/kendo.bootstrap.min.css',
     	'styles/kendo.dataviz.min.css',
-    	'styles/kendo.dataviz.material.min.css'
+    	'styles/kendo.dataviz.bootstrap.min.css'
     ];
     public $depends = [
     ];

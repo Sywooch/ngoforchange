@@ -18,14 +18,16 @@ class MedicinesMoves extends ActiveRecord
         return 'medicines_movement';
     }
 
-    public function serialize()
+    public function getPerson()
     {
-        return serialize($this->attributes);
+        // Movement has_one Person via Person.id -> person_id
+        return $this->hasOne(Person::className(), ['id' => 'person_id']);
     }
-    
-    public function unserialize($serialized)
+
+    public function getMedicines()
     {
-        $this->setAttributes(unserialize($serialized), false);
+        // Movement has_one Medicine via Medicine.id -> medicine_id
+        return $this->hasOne(Medicines::className(), ['id' => 'medicines_id']);
     }
 }
 

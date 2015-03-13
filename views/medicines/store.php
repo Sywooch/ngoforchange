@@ -21,17 +21,18 @@ var labels = {
     "grid_details_action": "<?php echo Yii::t('app', 'Action'); ?>",
     "grid_details_actdate": "<?php echo Yii::t('app', 'Action Date'); ?>",
     "grid_details_count": "<?php echo Yii::t('app', 'Count'); ?>",
-    "grid_details_movreasono": "<?php echo Yii::t('app', 'Reason'); ?>",
-    "grid_details_donator": "<?php echo Yii::t('app', 'Donator'); ?>",
+    "grid_details_movreason": "<?php echo Yii::t('app', 'Reason'); ?>",
+    "grid_details_fname": "<?php echo Yii::t('app', 'First Name'); ?>",
+    "grid_details_lname": "<?php echo Yii::t('app', 'Last Name'); ?>",
 
     "notifs_message": "<?php echo Yii::t('app', 'Please pay attention to following medicines'); ?>",
     "notifs_message_expiration": "<?php echo Yii::t('app', 'expiration'); ?>",
 };
 
 var links = {
-    "grid_read": "?r=api/medstock",
-    "grid_details_read": "?r=api/medmoves",
-    "notifs_read": "?r=api/mednotifs",
+    "grid_read": "?r=api/medicines/store",
+    "grid_details_read": "?r=api/medicines/moves",
+    "notifs_read": "?r=api/medicines/notifs",
 };
 </script>
 
