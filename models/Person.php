@@ -18,14 +18,10 @@ class Person extends ActiveRecord
         return 'person';
     }
 
-    public function serialize()
+    public function getTypes()
     {
-        return serialize($this->attributes);
-    }
-    
-    public function unserialize($serialized)
-    {
-        $this->setAttributes(unserialize($serialized), false);
+        return $this->hasMany(PersonType::className(), ['id' => 'person_type_id'])
+            ->viaTable('person_type_asign', ['person_id' => 'id']);
     }
 }
 

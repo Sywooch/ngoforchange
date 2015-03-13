@@ -13,26 +13,30 @@
         });
     }
 
+    window.Getvalue = function (value) {
+        return value;
+    }
+
     $("#mainGrid").kendoGrid({
         dataSource: {
             transport: {
                 create: {
-                    url: links.grid_create,
+                    url: links.person_create,
                     type: "POST",
                     dataType: "json"
                 },
                 read: {
-                    url: links.grid_read,
+                    url: links.person_read,
                     type: "GET",
                     dataType: "json"
                 },
                 update: {
-                    url: links.grid_update,
+                    url: links.person_update,
                     type: "POST",
                     dataType: "json"
                 },
                 destroy: {
-                    url: links.grid_destroy,
+                    url: links.person_destroy,
                     type: "POST",
                     dataType: "json"
                 },
@@ -69,10 +73,6 @@
             confirmation: labels.grid_confirm_delete,
             confirmDelete: "Yes"
         },
-        toolbar: [{
-            name: "create",
-            text: labels.newbutton
-        }],
         groupable: true,
         sortable: true,
         resizable: true,
@@ -93,24 +93,29 @@
             }
         },
         columns: [{
-            field: "name",
-            title: labels.grid_column_name,
+            field: "id",
+            title: labels.grid_column_id,
+            width: 40
+        }, {
+            field: "first_name",
+            title: labels.grid_column_fname,
             width: 150
         }, {
-            field: "unit_type",
-            title: labels.grid_column_unit,
+            field: "last_name",
+            title: labels.grid_column_lname,
             width: 150
         }, {
-            field: "details",
-            title: labels.grid_column_details,
-            width: 150
+            field: "type",
+            title: labels.grid_column_types,
+            width: 150,
+            template: 'AAA #=window.Getvalue()#'
         }, {
             command: [{
                 name: "edit",
-                text: labels.edit
+                text: labels.grid_button_edit
             }, {
                 name: "destroy",
-                text: labels.destroy
+                text: labels.grid_button_destroy
             }],
             title: "&nbsp;",
             width: 250

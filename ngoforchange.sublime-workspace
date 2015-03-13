@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"per",
+				"person"
+			],
+			[
+				"medi",
+				"medicine_id"
+			],
+			[
+				"medicine",
+				"medicines"
+			],
+			[
+				"Medici",
+				"MedicinesMoves"
+			],
+			[
+				"Medicines",
+				"MedicinesMoves"
+			],
+			[
+				"medici",
+				"medicine_id"
+			],
+			[
+				"status",
+				"statusCode"
+			],
+			[
+				"RSP",
+				"RSP_DATA"
+			],
+			[
 				"gri",
 				"grid_read"
 			],
@@ -56,10 +88,6 @@
 				"statusText"
 			],
 			[
-				"status",
-				"statusText"
-			],
-			[
 				"con",
 				"condition"
 			]
@@ -67,6 +95,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "views/persons/all.php",
+			"settings":
+			{
+				"buffer_size": 1114,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -111,24 +147,71 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/vendor/bower/kendo-ui",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/vendor/bower/kendo-ui/styles",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines"
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons"
 	],
 	"file_history":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/ApiController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/MedicinesMoves.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/moves.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonType.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/person/all.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/MedicinesController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/all.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/MedicinesController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/moves.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/store.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/assets/KendoAsset.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/components/ApiController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/store.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/ApiController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/moves.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/list.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/MedicinesMoves.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/links.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/db.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/DefaultController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PatientsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/views/default/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/web.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/modules.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataVolunteer.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataRelative.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/GoodReceipt.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/EventPerson.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Event.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PayReceipt.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonContact.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Elections.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/CashReceipt.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/ElectionsVotes.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
 		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
@@ -237,8 +320,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "views/persons/all.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								679,
+								679
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -315,7 +428,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 197.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

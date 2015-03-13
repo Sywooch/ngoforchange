@@ -8,7 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Medicine;
 
-class PersonController extends Controller
+class PersonsController extends Controller
 {
     public function actionIndex()
     {
@@ -20,5 +20,5 @@ class PersonController extends Controller
 		return $this->render('all');	
     }
 
-    
+
 }

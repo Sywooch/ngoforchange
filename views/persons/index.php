@@ -3,7 +3,7 @@
 ?>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
-	href="?r=person/all"
+	href="?r=persons/all"
 	role="button">
 		All People
 </a>

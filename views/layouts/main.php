@@ -42,7 +42,7 @@ AppAsset::register($this);
                 array_push($items, [
                     'label' => 'Entries',
                     'items' => [
-                        ['label' => 'People', 'url' => ['/person']],
+                        ['label' => 'People', 'url' => ['/persons']],
                         ['label' => 'Medicines', 'url' => ['/medicines']],
                         ['label' => 'Events', 'url' => ['/events']],
                         ['label' => 'Invoices', 'url' => ['/invoices']]

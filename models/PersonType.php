@@ -17,16 +17,6 @@ class PersonType extends ActiveRecord
     {
         return 'person_type';
     }
-
-    public function serialize()
-    {
-        return serialize($this->attributes);
-    }
-    
-    public function unserialize($serialized)
-    {
-        $this->setAttributes(unserialize($serialized), false);
-    }
 }
 
 ?>
