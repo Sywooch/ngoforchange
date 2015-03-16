@@ -23,6 +23,11 @@ class Person extends ActiveRecord
         return $this->hasMany(PersonType::className(), ['id' => 'person_type_id'])
             ->viaTable('person_type_asign', ['person_id' => 'id']);
     }
+
+    public function setTypes()
+    {
+        /// writting assignments
+    }
 }
 
 ?>
