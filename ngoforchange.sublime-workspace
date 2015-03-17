@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"moe",
+				"model_name"
+			],
+			[
+				"model",
+				"model_name"
+			],
+			[
+				"post",
+				"post_is_valid"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"person",
+				"person_types"
+			],
+			[
 				"per",
 				"person"
 			],
@@ -96,10 +120,26 @@
 	"buffers":
 	[
 		{
-			"file": "views/persons/all.php",
+			"file": "controllers/PersonsController.php",
 			"settings":
 			{
-				"buffer_size": 1114,
+				"buffer_size": 3199,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/persons/FormPerson.php",
+			"settings":
+			{
+				"buffer_size": 1600,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/js/persons/formperson.js",
+			"settings":
+			{
+				"buffer_size": 166,
 				"line_ending": "Windows"
 			}
 		}
@@ -145,29 +185,29 @@
 	"expanded_folders":
 	[
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons"
 	],
 	"file_history":
 	[
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/info.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormPerson.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonType.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/person/all.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/MedicinesController.php",
@@ -323,31 +363,86 @@
 			[
 				{
 					"buffer": 0,
-					"file": "views/persons/all.php",
+					"file": "controllers/PersonsController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1114,
+						"buffer_size": 3199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								679,
-								679
+								1669,
+								1669
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 800.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/persons/FormPerson.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								546,
+								546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 105.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web/js/persons/formperson.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

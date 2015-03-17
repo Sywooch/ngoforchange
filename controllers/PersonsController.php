@@ -27,12 +27,19 @@ class PersonsController extends Controller
     	$get = Yii::$app->request->get();
     	
     	$types = PersonType::find()->asArray()->all();
-    	$person_id = isset($post->person_id) ? $post->person_id : '';
+    	$person_id = isset($post['person_id']) ? $post['person_id'] : '';
     	$person = [];
-    	$model = [];
+    	
+    	// defaults are ...
+    	$formName = 'FormPerson';
+    	$modelName = 'Person';
+		$model = new Person();
+
+		// keeps the data if post data passed validation, and whether it is valid or not
+		$post_is_valid = null;
 
     	// processing submitted data
-    	if(isset($post->modelName)) {
+    	if(isset($post['modelName'])) {
     		// get person by ID
     		$person = Person::find()
     			->with(['types'])
@@ -40,65 +47,80 @@ class PersonsController extends Controller
     			->asArray()
     			->one();
 
-    		if($this->hasTypeByModel($person['types'], $post->modelName)) {
+    		if($this->hasTypeByModel($person['types'], $post['modelName'])) {
     			// data is for registered type
-    			$classReflect = new \ReflectionClass('app\models\\'.$post->modelName);
+    			$classReflect = new \ReflectionClass('app\models\\'.$post['modelName']);
+    			$modelName = $post['modelName'];
     			$model = $classReflect->newInstanceArgs();
 
-    			if ($model->load($post)) {
-			        if ($model->validate()) {
-			            // form inputs are valid, do something here
-			            return;
-			        }
-			    }
+    			if ($model->load($post) && $model->validate()) {
+		        	// form inputs are valid, do something here
+		        	$post_is_valid = true;
+		            // saving
+		            echo 'isValid -- saving <br />';
+			    } else {
+	        		$post_is_valid = false;
+	        		echo 'is not Valid <br />';
+		        }
     		}
     	}
 
-	    $formName = '';
-	
+		// choosing form
+    	if($post_is_valid === false) {
+    		// we get the same form to show errors
+    		$formName = $this->getFormByModel($types, $modelName);
+    	} else if($post_is_valid === true) {
+    		// receive next form
+    		$formName = $this->getNextForm($person);
+    	}
+	    
+	    echo $formName;
 		// showing form
-	    
-
-		/*
-		if( has NOT id from post)
-			show personform
-		else {
-			for (types) {
-				request db for model by id
-				if(there is data) {
-					continue;
-				} else {
-					show Form
-					return;
-				}
-			}
-			if (everymodel is fine)
-				show Thank you
-		}
-*/
-
-		// data integrity check
-	    
-
-	    return $this->render($formName, [
+	    /*return $this->render($formName, [
 	        'model' => $model,
 	        'types' => $types,
 	        'isCreate' => true
-	    ]);	
+	    ]);	*/
     }
 
-    private function hasTypeByModel($types, $model_name)
+    private function getNextForm($person)
+    {
+    	if(!isset($person->id))
+    		return 'FormPerson';
+    	
+    }
+
+    private function getFormByModel($types, $model_name)
     {
     	if($model_name == '')
-    		throw new Exception("Model in post data can't be empty.");
+    		throw new Exception("Model name can't be empty", 1);
+    		
+    	if($model_name == 'Person')
+    		return 'FormPerson';
+
+    	foreach ($types as $key => $type) {
+    		if($type['model_name'] == $model_name) {
+    			if(!$type['form_name'])
+    				throw new Exception("There is no available form name for this model", 1);
+    			return $type['form_name'];
+    		}
+    	}
+
+    	throw new Exception("Unknown model name is passed", 1);
+    }
+
+    private function hasTypeByModel($person_types, $model_name)
+    {
+    	if($model_name == '')
+    		throw new Exception("Model name can't be empty.");
 
     	if($model_name == 'Person')
     		return true;
 
-    	if(count($types) <= 0)
+    	if(count($person_types) <= 0)
     		return false;
 
-    	foreach($types as $i => $type) {
+    	foreach($person_types as $i => $type) {
     		if($type['model_name'] == $model_name)
     			return true;
     	}

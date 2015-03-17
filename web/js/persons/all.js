@@ -13,8 +13,16 @@
         });
     }
 
-    window.Getvalue = function (value) {
-        return value;
+    window.typesToString = function (types) {
+        var string = '';
+
+        for(var i = 0; i < types.length; i++) {
+            if(i != 0)
+                string += ', ';
+
+            string += types[i].name;
+        }
+        return string;
     }
 
     $("#mainGrid").kendoGrid({
@@ -84,13 +92,6 @@
         },
         filterable: {
             extra: false,
-            operators: {
-                string: {
-                    startswith: "Starts with",
-                    eq: "Is equal to",
-                    neq: "Is not equal to"
-                }
-            }
         },
         columns: [{
             field: "id",
@@ -105,10 +106,11 @@
             title: labels.grid_column_lname,
             width: 150
         }, {
-            field: "type",
+            field: "types",
             title: labels.grid_column_types,
             width: 150,
-            template: 'AAA #=window.Getvalue()#'
+            filterable: false,
+            template: '#=window.typesToString(types)#'
         }, {
             command: [{
                 name: "edit",

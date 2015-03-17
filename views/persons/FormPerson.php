@@ -18,7 +18,10 @@ $this->registerJsFile(
 	<h1><?= ($isCreate) ? 'Create a Person' : 'Edit the Person' ?></h1>
 
     <?php $form = ActiveForm::begin(); ?>
-    	
+
+    	<input type="hidden" id="modelName" name="modelName" value="Person" />
+    	<input type="hidden" id="modelName" name="person_id" value="" />
+
 		<?= (!$isCreate) ? $form->field($model, 'id')->textInput(['tabIndex'=>'1','id' => 'id']) : ''  ?>
 		<?= $form->field($model, 'first_name')->textInput(['tabIndex'=>'2','id'=>'first_name']) ?>
 		<?= $form->field($model, 'last_name')->textInput(['tabIndex'=>'3','id'=>'last_name']) ?>
