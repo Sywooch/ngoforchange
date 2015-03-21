@@ -18,6 +18,7 @@ class PersonsController extends ApiController
 
     	if($id == '') {
     		$persons = Person::find()
+                ->where('is_deleted IS NULL OR is_deleted = 0')
     			->with(['types'])
     			->asArray()
     			->all();

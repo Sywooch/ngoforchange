@@ -9,6 +9,12 @@
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
+	href="?r=persons/contacts"
+	role="button">
+		All Contacts
+</a>
+<a
+	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=medicines/list"
 	role="button">
 		Patients

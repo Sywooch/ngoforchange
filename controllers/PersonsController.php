@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\Person;
 use app\models\PersonType;
@@ -125,6 +126,39 @@ class PersonsController extends Controller
 	    ]);
     }
 
+    public function actionView($person_id)
+    {
+        $person = Person::find()
+            ->where(['id' => $person_id])
+            ->with(['types'])
+            ->one();
+
+        if($person == null) {
+            throw new NotFoundHttpException('Object you are requested not found.');
+        }
+
+        $person_data = [];
+
+        if(isset($person->types)) {
+            foreach ($person->types as $key => $type) {
+                $classReflect = new \ReflectionClass('app\models\\'. $type->model_name);
+                $find = $classReflect->getMethod('find')->invoke(null);
+
+                array_push($person_data, [
+                        'id' => $type->id,
+                        'name' => $type->name,
+                        'model' => $find->where(['person_id' => $person_id])->one()
+                    ]);
+            }
+        }
+
+        return $this->render('view', [
+                'person' => $person,
+                'person_data' => $person_data
+            ]);
+    }
+
+    // retireving person information from database
     private function getPersonInfo($person_id)
     {
         return Person::find()
@@ -134,6 +168,7 @@ class PersonsController extends Controller
             ->one();
     }
 
+    // procedure to check data posted to creator
     private function personDataCheck($post)
     {
         // id can be empty in case of Person, but person_id can't

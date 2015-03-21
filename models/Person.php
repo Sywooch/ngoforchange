@@ -120,8 +120,6 @@ class Person extends ActiveRecord
             'address' => Yii::t('app', 'Address'),
             'post_code' => Yii::t('app', 'Post Code'),
             'city' => Yii::t('app', 'City'),
-            'is_deleted' => Yii::t('app', 'Is Deleted'),
-            'deletion_reason' => Yii::t('app', 'Deletion Reason'),
             'types' => Yii::t('app', 'Register as')
         ];
     }
