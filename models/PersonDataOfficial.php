@@ -5,28 +5,27 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "person_date_friend".
+ * This is the model class for table "person_data_official".
  *
  * @property string $person_id
- * @property string $ssrn
+ * @property string $institution
+ * @property string $capacity
  * @property string $address
  * @property string $post_code
  * @property string $city
- * @property string $registered_since
- * @property string $comments
  * @property string $create_time
  * @property string $update_time
  *
  * @property Person $person
  */
-class PersonDataFriend extends \yii\db\ActiveRecord
+class PersonDataOfficial extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'person_date_friend';
+        return 'person_data_official';
     }
 
     /**
@@ -35,11 +34,11 @@ class PersonDataFriend extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'ssrn', 'city', 'registered_since'], 'required'],
+            [['person_id', 'institution', 'capacity', 'city'], 'required'],
             [['person_id'], 'integer'],
-            [['address', 'comments'], 'string'],
-            [['registered_since', 'create_time', 'update_time'], 'safe'],
-            [['ssrn', 'post_code', 'city'], 'string', 'max' => 255]
+            [['address'], 'string'],
+            [['create_time', 'update_time'], 'safe'],
+            [['institution', 'capacity', 'post_code', 'city'], 'string', 'max' => 255]
         ];
     }
 
@@ -50,12 +49,11 @@ class PersonDataFriend extends \yii\db\ActiveRecord
     {
         return [
             'person_id' => Yii::t('app', 'Person ID'),
-            'ssrn' => Yii::t('app', 'Ssrn'),
+            'institution' => Yii::t('app', 'Institution'),
+            'capacity' => Yii::t('app', 'Capacity'),
             'address' => Yii::t('app', 'Address'),
             'post_code' => Yii::t('app', 'Post Code'),
             'city' => Yii::t('app', 'City'),
-            'registered_since' => Yii::t('app', 'Registered Since'),
-            'comments' => Yii::t('app', 'Comments'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];

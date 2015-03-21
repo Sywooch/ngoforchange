@@ -14,26 +14,14 @@ use Yii;
  *
  * @property PersonContact[] $personContacts
  */
-class Contacts extends \yii\db\ActiveRecord
+class ContactsList extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'contacts';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            [['type', 'data'], 'required'],
-            [['create_time'], 'safe'],
-            [['type', 'data'], 'string', 'max' => 255]
-        ];
+        return 'persons';
     }
 
     /**
@@ -42,7 +30,7 @@ class Contacts extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
+            'person_id' => Yii::t('app', 'ID'),
             'type' => Yii::t('app', 'Type'),
             'data' => Yii::t('app', 'Data'),
             'create_time' => Yii::t('app', 'Create Time'),

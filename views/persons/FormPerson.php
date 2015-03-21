@@ -7,6 +7,11 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Person */
 /* @var $form ActiveForm */
 
+if($isCreate)
+	$this->title = 'Create a Person';
+else
+	$this->title = 'Edit the Person';
+
 $this->registerJsFile(
 	'js/persons/formperson.js',
 	[
@@ -14,28 +19,93 @@ $this->registerJsFile(
 		'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']
 	]);
 ?>
+<script type="text/javascript">
+	window.personTypesSelected = [
+		<?php  ?>
+	];
+</script>
 <div class="FormPerson">
-	<h1><?= ($isCreate) ? 'Create a Person' : 'Edit the Person' ?></h1>
+	<h1><?= $this->title ?></h1>
 
     <?php $form = ActiveForm::begin(); ?>
 
-    	<input type="hidden" id="modelName" name="modelName" value="Person" />
-    	<input type="hidden" id="modelName" name="person_id" value="" />
+    	<input type="hidden" id="model_name" name="model_name" value="Person" required="required" />
+    	<input type="hidden" id="id" name="id" value="<?= $person_id ?>" />
+    	<input type="hidden" id="step" name="step" value="<?= $step ?>" />
 
-		<?= (!$isCreate) ? $form->field($model, 'id')->textInput(['tabIndex'=>'1','id' => 'id']) : ''  ?>
-		<?= $form->field($model, 'first_name')->textInput(['tabIndex'=>'2','id'=>'first_name']) ?>
-		<?= $form->field($model, 'last_name')->textInput(['tabIndex'=>'3','id'=>'last_name']) ?>
-    	
-    	<div class="form-group field-person-types">
-			<label class="control-label" for="types">Register as</label>
-			<select id="required" multiple="multiple" data-placeholder="pick types ...">
-	            <option>Patient</option>
-	            <option>Friend</option>
-	            <option>Official</option>
-	            <option>Volunteer</option>
-	        </select>
-		</div>
-    	
+		<?=
+			(!$isCreate) ? 
+				$form->field($model, 'id')
+					->textInput([
+						'id' => 'id',
+						'tabIndex' => '1', 
+				]) : ''
+		?>
+		<?=
+			$form->field($model, 'first_name')
+				->textInput([
+					'id' => 'first_name',
+					'tabIndex' => '2',
+				])
+		?>
+		<?=
+			$form->field($model, 'last_name')
+				->textInput([
+					'id' => 'last_name',
+					'tabIndex' => '3',
+				])
+		?>
+		<?=
+			$form->field($model, 'father_name')
+				->textInput([
+					'id' => 'father_name',
+					'tabIndex' => '4',
+				])
+		?>
+		<?=
+			$form->field($model, 'ssrn')
+				->textInput([
+					'id' => 'ssrn',
+					'tabIndex' => '3',
+				])
+		?>
+		<?=
+			$form->field($model, 'id_number')
+				->textInput([
+					'id' => 'id_number',
+					'tabIndex' => '3',
+				])
+		?>
+		<?=
+			$form->field($model, 'address')
+				->textInput([
+					'id' => 'address',
+					'tabIndex' => '3',
+				])
+		?>
+		<?=
+			$form->field($model, 'post_code')
+				->textInput([
+					'id' => 'post_code',
+					'tabIndex' => '3',
+				])
+		?>
+		<?=
+			$form->field($model, 'city')
+				->textInput([
+					'id' => 'city',
+					'tabIndex' => '3',
+				])
+		?>
+    	<?=
+    		$form->field($model, 'selectedTypes')
+    			->listBox($types, [
+					'id' => 'selectedTypes',
+					'tabIndex' => '4',
+				    'multiple' => true,
+				    'data-placeholder' => Yii::t('app', 'pick types ...')
+				])
+		?>  	
         
         <div class="form-group text-right">
         	<a href="?r=persons/all" class="btn btn-danger">Cancel</a>

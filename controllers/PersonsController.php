@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Person;
 use app\models\PersonType;
+use app\models\PersonDataPatient;
 
 class PersonsController extends Controller
 {
@@ -25,105 +26,156 @@ class PersonsController extends Controller
     {
     	$post = Yii::$app->request->post();
     	$get = Yii::$app->request->get();
-    	
     	$types = PersonType::find()->asArray()->all();
-    	$person_id = isset($post['person_id']) ? $post['person_id'] : '';
-    	$person = [];
-    	
-    	// defaults are ...
-    	$formName = 'FormPerson';
-    	$modelName = 'Person';
-		$model = new Person();
+        
+        $person_id = isset($post['person_id']) ? $post['person_id'] : '';
+        $step = isset($post['step']) ? $post['step'] : 0;
+        $step_back = max($step - 1, 0);
+        $step_next = $step + 1;
 
 		// keeps the data if post data passed validation, and whether it is valid or not
-		$post_is_valid = null;
+		$validation_success = null;
+
+        // building steps
+        $steps = [
+            [
+                'id' => '',
+                'name' => 'Person',
+                'data_table' => 'person',
+                'model_name' => 'Person',
+                'form_name' => 'FormPerson',
+            ], /*[
+                'id' => '',
+                'name' => 'Contact',
+                'data_table' => 'person_contact',
+                'model_name' => 'ContactsList',
+                'form_name' => 'FormContacts',
+            ]*/
+        ];
+        $steps_last = [
+                'id' => '',
+                'name' => 'Summary',
+                'data_table' => 'vw_person_summary',
+                'model_name' => 'PersonSummary',
+                'form_name' => 'FormSummary'
+            ];
 
     	// processing submitted data
-    	if(isset($post['modelName'])) {
-    		// get person by ID
-    		$person = Person::find()
-    			->with(['types'])
-    			->where(['id' => $person_id])
-    			->asArray()
-    			->one();
+		if($this->personDataCheck($post)) {
+			// data is for registered type
+            $post_model_name = $post['model_name'];
 
-    		if($this->hasTypeByModel($person['types'], $post['modelName'])) {
-    			// data is for registered type
-    			$classReflect = new \ReflectionClass('app\models\\'.$post['modelName']);
-    			$modelName = $post['modelName'];
-    			$model = $classReflect->newInstanceArgs();
+			$classReflect = new \ReflectionClass('app\models\\'. $post_model_name);
+			$model = $classReflect->newInstanceArgs();
 
-    			if ($model->load($post) && $model->validate()) {
-		        	// form inputs are valid, do something here
-		        	$post_is_valid = true;
-		            // saving
-		            echo 'isValid -- saving <br />';
-			    } else {
-	        		$post_is_valid = false;
-	        		echo 'is not Valid <br />';
-		        }
-    		}
+			if ($model->load($post) && $model->validate()) {
+                echo 'model loaded succesfully <---------';
+	        	// form inputs are valid, do something here
+	        	$validation_success = true;
+	            
+                // saving
+	            $model->save();
+                $person_id = isset($model->id) ? $model->id : $model->person_id;
+
+		    } else {
+        		$validation_success = false;
+	        }
+		}
+
+        // get person information
+        $person = $this->getPersonInfo($person_id);
+
+        // merge current steps with additional person types
+        if($person) {
+            $steps = array_merge($steps, $person['types']);
+        }
+
+        // add last step
+        array_push($steps, $steps_last);
+
+		// if validation was ok, we can go to next step
+    	if($validation_success === true) {
+    	   $step = $step_next;
     	}
 
-		// choosing form
-    	if($post_is_valid === false) {
-    		// we get the same form to show errors
-    		$formName = $this->getFormByModel($types, $modelName);
-    	} else if($post_is_valid === true) {
-    		// receive next form
-    		$formName = $this->getNextForm($person);
-    	}
+        $step_data = $steps[$step];
+
+        $classReflect = new \ReflectionClass('app\models\\'. $step_data['model_name']);
+        $model = $classReflect->newInstanceArgs();
+
+        //
+        if($validation_success === false) {
+            $model->load($post);
+        } else if($validation_success === true) {
+            $find = $classReflect->getMethod('find')->invoke(null);
+            $model_existing = $find->where("person_id = '$person_id'")->asArray()->one();
+            if($model_existing)
+                $model = $model_existing;
+        }
 	    
-	    echo $formName;
 		// showing form
-	    /*return $this->render($formName, [
-	        'model' => $model,
-	        'types' => $types,
-	        'isCreate' => true
-	    ]);	*/
+	    return $this->render($step_data['form_name'], [
+	        'isCreate' => true,
+            'step' => $step,
+            'person_id' => $person_id,
+            'person' => $person,
+            'model' => $model,
+	        'types' => $this->normalizeTypes($types),
+	        'post' => $post
+	    ]);
     }
 
-    private function getNextForm($person)
+    private function getPersonInfo($person_id)
     {
-    	if(!isset($person->id))
-    		return 'FormPerson';
-    	
+        return Person::find()
+            ->with(['types'])
+            ->where(['id' => $person_id])
+            ->asArray()
+            ->one();
     }
 
-    private function getFormByModel($types, $model_name)
+    private function personDataCheck($post)
     {
-    	if($model_name == '')
-    		throw new Exception("Model name can't be empty", 1);
-    		
-    	if($model_name == 'Person')
-    		return 'FormPerson';
+        // id can be empty in case of Person, but person_id can't
+        if(!isset($post['id']) && !isset($post['person_id']))
+            return false;
 
-    	foreach ($types as $key => $type) {
-    		if($type['model_name'] == $model_name) {
-    			if(!$type['form_name'])
-    				throw new Exception("There is no available form name for this model", 1);
-    			return $type['form_name'];
-    		}
+        if(isset($post['person_id']) && $post['person_id'] == '')
+            return false;
+
+        if(!isset($post['model_name']))
+            return false;
+
+        $person_id = isset($post['id']) ? $post['id'] : $post['person_id'];
+        $model_name = $post['model_name'];
+
+        if($model_name == '')
+            throw new Exception("Model name can't be empty.");
+
+        if($model_name == 'Person' || $model_name == 'PersonContact')
+            return true;
+
+        $person = $this->getPersonInfo($person_id);
+
+        if(!isset($person['types']))
+            return false;
+
+        if(count($person['types']) <= 0)
+            return false;
+
+        foreach($person['types'] as $i => $type) {
+            if($type['model_name'] == $model_name)
+                return true;
+        }
+        return false;
+    }
+
+    private function normalizeTypes($types)
+    {
+    	$normalized = [];
+    	foreach ($types as $key => $value) {
+    		$normalized[$value['id']] = $value['name'];
     	}
-
-    	throw new Exception("Unknown model name is passed", 1);
-    }
-
-    private function hasTypeByModel($person_types, $model_name)
-    {
-    	if($model_name == '')
-    		throw new Exception("Model name can't be empty.");
-
-    	if($model_name == 'Person')
-    		return true;
-
-    	if(count($person_types) <= 0)
-    		return false;
-
-    	foreach($person_types as $i => $type) {
-    		if($type['model_name'] == $model_name)
-    			return true;
-    	}
-    	return false;
-    }
+    	return $normalized;
+    }    
 }

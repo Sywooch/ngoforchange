@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"id",
+				"id_number"
+			],
+			[
+				"perso",
+				"person_id"
+			],
+			[
+				"valid",
+				"validation_success"
+			],
+			[
+				"ste",
+				"step_data"
+			],
+			[
+				"step",
+				"step_data"
+			],
+			[
+				"modl",
+				"model_name"
+			],
+			[
+				"getNe",
+				"getNextStep"
+			],
+			[
+				"steps",
+				"steps_last"
+			],
+			[
+				"pers",
+				"person_id"
+			],
+			[
+				"post",
+				"post"
+			],
+			[
+				"mode",
+				"model_name"
+			],
+			[
+				"Perso",
+				"Person"
+			],
+			[
+				"ass",
+				"assign_new"
+			],
+			[
+				"type",
+				"type_id"
+			],
+			[
+				"Person",
+				"Person"
+			],
+			[
+				"person",
+				"person_id"
+			],
+			[
+				"per",
+				"person_id"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
 				"moe",
 				"model_name"
 			],
@@ -12,24 +88,12 @@
 				"model_name"
 			],
 			[
-				"post",
-				"post_is_valid"
-			],
-			[
 				"class",
 				"className"
 			],
 			[
 				"clas",
 				"className"
-			],
-			[
-				"person",
-				"person_types"
-			],
-			[
-				"per",
-				"person"
 			],
 			[
 				"medi",
@@ -120,26 +184,18 @@
 	"buffers":
 	[
 		{
-			"file": "controllers/PersonsController.php",
-			"settings":
-			{
-				"buffer_size": 3199,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "views/persons/FormPerson.php",
 			"settings":
 			{
-				"buffer_size": 1600,
+				"buffer_size": 2575,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "web/js/persons/formperson.js",
+			"file": "models/Person.php",
 			"settings":
 			{
-				"buffer_size": 166,
+				"buffer_size": 5509,
 				"line_ending": "Windows"
 			}
 		}
@@ -185,9 +241,8 @@
 	"expanded_folders":
 	[
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
@@ -196,17 +251,44 @@
 	],
 	"file_history":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormOfficial.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormVolunteer.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormSummary.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonSummary.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormThanks.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormContacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/ContactsList.php",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/C/wamp/alias/phpmyadmin.conf",
+		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-mpm.conf",
+		"/C/wamp/bin/apache/apache2.4.9/conf/wampserver.conf",
+		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataRelative.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataVolunteer.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormContacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonContact.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/formperson.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
+		"/C/Users/ShaderZAK/Desktop/kendo.culture.el.js",
+		"/C/Users/ShaderZAK/Desktop/kendo.culture.el-GR.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/database/eenosims-2015-03-17.sql",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/info.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormFriend.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormPerson.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonType.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/person/all.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
@@ -234,17 +316,10 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/views/default/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/web.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/modules.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataVolunteer.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataRelative.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/GoodReceipt.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/EventPerson.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Event.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PayReceipt.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonContact.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Elections.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/CashReceipt.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/ElectionsVotes.php",
@@ -252,8 +327,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
-		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
-		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/wrappers/php/grid/editing.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/store.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines/store.js",
@@ -305,21 +378,11 @@
 		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/events.php",
 		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/images.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/css/site.css",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/keyboard-navigation.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/right-to-left-support.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/index.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/LICENSE.md",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/README (2).md",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/web/index.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/yii.bat",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/htdocs/index.php",
-		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-access.log",
-		"/C/wamp/bin/apache/apache2.4.9/logs/dummy-host.example.com-error.log",
-		"/C/wamp/bin/apache/apache2.4.9/logs/install.log"
+		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/keyboard-navigation.php"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -333,6 +396,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"''))\n",
+			"php",
+			"directory",
 			"fr",
 			"woff",
 			"kendoui",
@@ -358,91 +424,66 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "controllers/PersonsController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3199,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1669,
-								1669
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 800.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "views/persons/FormPerson.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1600,
+						"buffer_size": 2575,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								546,
-								546
+								542,
+								542
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 105.0,
+						"translation.x": -0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "web/js/persons/formperson.js",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "models/Person.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 166,
+						"buffer_size": 5509,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								1360,
+								1360
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 585.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -521,7 +562,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 212.0,
+	"side_bar_width": 207.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

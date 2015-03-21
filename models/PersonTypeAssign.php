@@ -15,7 +15,7 @@ class PersonTypeAssign extends ActiveRecord
  
     public static function tableName()
     {
-        return 'person_type_assign';
+        return 'person_type_asign';
     }
 
     public function serialize()

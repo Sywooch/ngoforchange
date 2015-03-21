@@ -1,5 +1,10 @@
 $(document).ready(function() {
     // create MultiSelect from select HTML element
-    var required = $("#required").kendoMultiSelect().data("kendoMultiSelect");
+    var required = $("#types")
+	    .kendoMultiSelect({
+	    	dataTextField: "name",
+	  		dataValueField: "id",
+	  		value: window.personTypesSelected
+	    }).data("kendoMultiSelect");
 
 });

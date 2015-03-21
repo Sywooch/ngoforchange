@@ -3,30 +3,53 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
-class PersonDataRelative extends ActiveRecord
+/**
+ * This is the model class for table "person_data_relative".
+ *
+ * @property string $person_id
+ * @property string $type
+ *
+ * @property Person $person
+ */
+class PersonDataRelative extends \yii\db\ActiveRecord
 {
-	
-    public static function model($className=__CLASS__)
-    {
-        return parent::model($className);
-    }
- 
+    /**
+     * @inheritdoc
+     */
     public static function tableName()
     {
         return 'person_data_relative';
     }
 
-    public function serialize()
+    /**
+     * @inheritdoc
+     */
+    public function rules()
     {
-        return serialize($this->attributes);
+        return [
+            [['person_id', 'type'], 'required'],
+            [['person_id'], 'integer'],
+            [['type'], 'string', 'max' => 255]
+        ];
     }
-    
-    public function unserialize($serialized)
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
     {
-        $this->setAttributes(unserialize($serialized), false);
+        return [
+            'person_id' => Yii::t('app', 'Person ID'),
+            'type' => Yii::t('app', 'Type'),
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPerson()
+    {
+        return $this->hasOne(Person::className(), ['id' => 'person_id']);
     }
 }
-
-?>
