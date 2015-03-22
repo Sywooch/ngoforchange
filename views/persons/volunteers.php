@@ -1,7 +1,7 @@
 <?php
 	$this->title = 'Volunteers';
 	$this->registerJsFile(
-		'js/persons/all.js',
+		'js/persons/volunteers.js',
 		[
 			'position' => yii\web\View::POS_END,
 			'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']

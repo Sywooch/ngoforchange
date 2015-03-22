@@ -84,4 +84,12 @@ class PersonDataPatient extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Person::className(), ['id' => 'person_id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDisabled()
+    {
+        return $this->hasOne(PersonTypeAssign::className(), ['person_id' => 'person_id']);
+    }
 }
