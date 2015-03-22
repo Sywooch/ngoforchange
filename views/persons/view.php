@@ -102,7 +102,7 @@ var links = {
 		<tbody>
 			<?php
 				if($data['model'] == null) {
-					echo '<tr><td>'. Yii::t('app', 'No data is available ').'</td></tr>';
+					echo '<tr><td colspan="2">'. Yii::t('app', 'No data is available ').'</td></tr>';
 				} else {
 					$labels = $data['model']->attributeLabels();
 					foreach ($data['model']->attributes as $key => $value) {
@@ -117,3 +117,77 @@ var links = {
 	</table>
 </div>
 <?php endforeach; ?>
+
+<!-- Contacts -->
+<div class="well well-sm">
+	<table class="table table-striped table-hover table-condensed table-responsive">
+		<thead>
+			<tr>
+				<th colspan="2">
+					<span class="glyphicon glyphicon-list"></span>
+					<?= Yii::t('app', 'Contact information') ?> 
+				</th>
+				<th class="text-right">
+					<a href='' class="btn btn-sm btn-info">
+						<span class="glyphicon glyphicon-pencil"></span>
+						<?= Yii::t('app', 'Edit') ?>
+					</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				if($person['contacts'] == null) {
+					echo '<tr><td colspan="2">'. Yii::t('app', 'No data is available ').'</td></tr>';
+				} else {
+					$icons = Yii::$app->params['contactTypeIcons'];
+					foreach ($person['contacts'] as $key => $contact) {
+						$icon = '';
+						if(isset($icons[$contact->type])) {
+							$icon = '<img src="'.$icons[$contact->type].'" alt="'.$contact->type.'" title="'.$contact->type.'" />';
+						}
+
+						echo '<tr><td class="contact-icon">'.$icon.'</td><td>'.$contact->type.'</td>';
+						echo '<td>'.$contact->data.'</td></tr>';
+					}	
+				}
+			?>
+		</tbody>
+	</table>
+</div>
+
+
+<!-- Donations -->
+<div class="well well-sm">
+	<table class="table table-striped table-hover table-condensed table-responsive">
+		<thead>
+			<tr>
+				<th>
+					<span class="glyphicon glyphicon-eur"></span>
+					<?= Yii::t('app', 'Donation information') ?> 
+				</th>
+				<th class="text-right">
+					<a href='' class="btn btn-sm btn-info">
+						<span class="glyphicon glyphicon-pencil"></span>
+						<?= Yii::t('app', 'Edit') ?>
+					</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				
+				echo '<tr><td colspan="2">'. Yii::t('app', 'No data is available ').'</td></tr>';
+				/*} else {
+					$labels = $data['model']->attributeLabels();
+					foreach ($data['model']->attributes as $key => $value) {
+						if(isset($labels[$key])) {
+							echo '<tr><td>'.$labels[$key].'</td>';
+							echo '<td>'.$value.'</td></tr>';
+						}
+					}	
+				}*/
+			?>
+		</tbody>
+	</table>
+</div>

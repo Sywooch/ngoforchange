@@ -93,3 +93,12 @@ a.desc:after {
 #mainGrid .k-grid-content {
     min-height: 150px;
 }
+
+.contact-icon {
+    width: 20px;
+}
+
+.contact-icon img {
+    max-width: 16px;
+    max-height: 16px;
+}

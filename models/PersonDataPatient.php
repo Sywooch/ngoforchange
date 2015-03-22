@@ -8,12 +8,8 @@ use Yii;
  * This is the model class for table "person_data_patient".
  *
  * @property string $person_id
- * @property string $ssrn
  * @property string $photo
  * @property string $mother_name
- * @property string $address
- * @property string $post_code
- * @property string $city
  * @property string $sex
  * @property string $marital_status
  * @property integer $children
@@ -47,12 +43,11 @@ class PersonDataPatient extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'ssrn', 'mother_name', 'address', 'city', 'disability'], 'required'],
+            [['person_id', 'mother_name', 'disability'], 'required'],
             [['person_id', 'children', 'private_correspondence'], 'integer'],
-            [['photo', 'address', 'disability', 'disability_proof', 'application_form', 'medication', 'comments'], 'string'],
+            [['photo', 'disability', 'disability_proof', 'application_form', 'medication', 'comments'], 'string'],
             [['last_contact', 'create_time', 'update_time'], 'safe'],
-            [['ssrn', 'mother_name', 'post_code', 'city', 'sex', 'marital_status', 'graduation', 'occupation'], 'string', 'max' => 255],
-            [['ssrn'], 'unique']
+            [['mother_name', 'sex', 'marital_status', 'graduation', 'occupation'], 'string', 'max' => 255],
         ];
     }
 
@@ -63,12 +58,8 @@ class PersonDataPatient extends \yii\db\ActiveRecord
     {
         return [
             'person_id' => Yii::t('app', 'Person ID'),
-            'ssrn' => Yii::t('app', 'Ssrn'),
             'photo' => Yii::t('app', 'Photo'),
             'mother_name' => Yii::t('app', 'Mother Name'),
-            'address' => Yii::t('app', 'Address'),
-            'post_code' => Yii::t('app', 'Post Code'),
-            'city' => Yii::t('app', 'City'),
             'sex' => Yii::t('app', 'Sex'),
             'marital_status' => Yii::t('app', 'Marital Status'),
             'children' => Yii::t('app', 'Children'),

@@ -13,9 +13,9 @@ use yii\widgets\ActiveForm;
 
         <h1>Register a Patient</h1>
 
-        <input type="text" id="model_name" name="model_name" value="PersonDataPatient" required="required" />
-        <input type="text" id="person_id" name="person_id" value="<?= $person_id ?>" />
-        <input type="text" id="step" name="step" value="<?= $step ?>" />
+        <input type="hidden" id="model_name" name="model_name" value="PersonDataPatient" required="required" />
+        <input type="hidden" id="person_id" name="person_id" value="<?= $person_id ?>" />
+        <input type="hidden" id="step" name="step" value="<?= $step ?>" />
         
         
         <div class="form-group">
@@ -31,10 +31,7 @@ use yii\widgets\ActiveForm;
                     'tabIndex' => '3',
                     'value' => $person_id
                 ]) ?>
-        <?= $form->field($model, 'ssrn') ?>
         <?= $form->field($model, 'mother_name') ?>
-        <?= $form->field($model, 'address') ?>
-        <?= $form->field($model, 'city') ?>
         <?= $form->field($model, 'disability') ?>
         <?= $form->field($model, 'children') ?>
         <?= $form->field($model, 'private_correspondence') ?>
@@ -44,9 +41,6 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'medication') ?>
         <?= $form->field($model, 'comments') ?>
         <?= $form->field($model, 'last_contact') ?>
-        <?= $form->field($model, 'create_time') ?>
-        <?= $form->field($model, 'update_time') ?>
-        <?= $form->field($model, 'post_code') ?>
         <?= $form->field($model, 'sex') ?>
         <?= $form->field($model, 'marital_status') ?>
         <?= $form->field($model, 'graduation') ?>

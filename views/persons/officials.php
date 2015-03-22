@@ -1,7 +1,7 @@
 <?php
-	$this->title = 'All contacts';
+	$this->title = 'Officials';
 	$this->registerJsFile(
-		'js/persons/contacts.js',
+		'js/persons/all.js',
 		[
 			'position' => yii\web\View::POS_END,
 			'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']
@@ -9,15 +9,15 @@
 ?>
 <script type="text/javascript">
 var labels = {
-	"grid_button_create": "<?php echo Yii::t('app', 'Create'); ?>",
 	"grid_button_edit": "<?php echo Yii::t('app', 'Edit'); ?>",
 	"grid_button_destroy": "<?php echo Yii::t('app', 'Delete'); ?>",
+	"grid_button_preview": "<?php echo Yii::t('app', 'Preview'); ?>",
 
 	"grid_column_id": "<?php echo Yii::t('app', 'ID'); ?>",
-	"grid_column_type": "<?php echo Yii::t('app', 'Category'); ?>",
-	"grid_column_data": "<?php echo Yii::t('app', 'Contact'); ?>",
-	"grid_column_person": "<?php echo Yii::t('app', 'Person'); ?>",
-	
+	"grid_column_fname": "<?php echo Yii::t('app', 'First Name'); ?>",
+	"grid_column_lname": "<?php echo Yii::t('app', 'Last Name'); ?>",
+	"grid_column_types": "<?php echo Yii::t('app', 'Registered as'); ?>",
+	"grid_column_ssrn": "<?php echo Yii::t('app', 'SSRN'); ?>",
 	"grid_column_idnumber": "<?php echo Yii::t('app', 'ID Number'); ?>",
 	"grid_column_fathername": "<?php echo Yii::t('app', 'Father Name'); ?>",
 	"grid_column_address": "<?php echo Yii::t('app', 'Address'); ?>",
@@ -28,15 +28,18 @@ var labels = {
 };
 
 var links = {
-	"contact_create": "?r=api/contacts/create",
-	"contact_read": "?r=api/contacts/index",
-	"contact_update": "?r=api/contacts/update",
-	"contact_destroy": "?r=api/contacts/destroy"
+	"person_read": "?r=api/persons/index",
+	"person_update": "?r=api/persons/update",
+	"person_destroy": "?r=api/persons/destroy",
+	"person_preview": "?r=persons/view&person_id="
 };
-
-var contactTypeIcons = <?php echo json_encode(Yii::$app->params['contactTypeIcons']) ?>;
 </script>
 
-<h3>All contacts</h3>
+<h3>Officials</h3>
+<p>
+	<a id="" href="?r=persons/create" class="btn btn-success">
+		<?php echo Yii::t('app', 'Register a person'); ?>
+	</a>
+</p>
 <div id="mainGrid">
 </div>

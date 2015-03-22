@@ -6,7 +6,7 @@ return [
     	'IceCream' => 'images/glyphs/glyphicons-536-ice-cream.png',
     	'Viber' => 'images/glyphs/glyphicons-422-send.png',
     	'Mobile' => 'images/glyphs/glyphicons-164-iphone.png',
-    	'Phone' => 'images/glyphs/glyphicons-21-home.png',
+    	'Phone' => 'images/glyphs/glyphicons-443-earphone.png',
     	'WebPage' => 'images/glyphs/glyphicons-21-home.png',
     	'Mail' => 'images/glyphs/glyphicons-11-envelope.png',
     	'PayPal' => 'images/glyphs-social/social-57-paypal.png',
@@ -24,12 +24,3 @@ return [
     	'Pinterest' => 'images/glyphs-social/social-1-pinterest.png'
     ]
 ];
-
-        
-        
-        
-        
-        
-        
-        
-        

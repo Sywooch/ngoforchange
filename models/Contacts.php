@@ -52,8 +52,9 @@ class Contacts extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPersonContacts()
+    public function getPerson()
     {
-        return $this->hasMany(PersonContact::className(), ['contacts_id' => 'id']);
+        return $this->hasOne(Person::className(), ['id' => 'person_id'])
+            ->viaTable('person_contact', ['contacts_id' => 'id']);
     }
 }

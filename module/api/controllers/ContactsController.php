@@ -18,14 +18,14 @@ class ContactsController extends ApiController
 
     	if($id == '') {
     		$persons = Contacts::find()
-    			->with(['personContacts'])
+    			->with(['person'])
     			->asArray()
     			->all();
     	}
     	else {
     		$persons = Contacts::find()
     			->where(['id' => $id])
-    			->with(['personContacts'])
+    			->with(['person'])
     			->asArray()
     			->all();
     	}

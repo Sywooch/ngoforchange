@@ -15,25 +15,25 @@
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
-	href="?r=medicines/list"
+	href="?r=persons/patients"
 	role="button">
 		Patients
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
-	href="?r=medicines/moves"
+	href="?r=persons/volunteers"
 	role="button">
 		Volunteers
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
-	href="?r=medicines/moves"
+	href="?r=persons/friends"
 	role="button">
 		Friends
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
-	href="?r=medicines/moves"
+	href="?r=persons/officials"
 	role="button">
 		Officials
 </a>

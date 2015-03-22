@@ -130,7 +130,7 @@ class PersonsController extends Controller
     {
         $person = Person::find()
             ->where(['id' => $person_id])
-            ->with(['types'])
+            ->with(['types', 'contacts'])
             ->one();
 
         if($person == null) {
@@ -161,6 +161,26 @@ class PersonsController extends Controller
     public function actionContacts()
     {
         return $this->render('contacts');
+    }
+
+    public function actionPatients()
+    {
+        return $this->render('patients');
+    }
+
+    public function actionVolunteers()
+    {
+        return $this->render('volunteers');
+    }
+
+    public function actionFriends()
+    {
+        return $this->render('friends');
+    }
+
+    public function actionOfficials()
+    {
+        return $this->render('officials');
     }
 
     // retireving person information from database

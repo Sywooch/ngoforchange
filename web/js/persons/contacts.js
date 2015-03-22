@@ -1,8 +1,14 @@
 ((function($) {
 
     window.getTypeIcon = function(type) {
-        var icon = 'icon';
-        return '<span>' + icon + '</span> ' + type;
+        var icon =  contactTypeIcons[type] || '';
+        return '<img src="' + icon + '" alt="' + type + '" title="' + type + '" />';
+    }
+
+    window.getPerson = function(person) {
+        if(!person)
+            return 'No person is assigned';
+        return person.first_name + ' ' + person.last_name;
     }
 
     $("#mainGrid").kendoGrid({
@@ -61,9 +67,9 @@
             confirmation: labels.grid_confirm_delete,
             confirmDelete: "Yes"
         },
-        /*toolbar: [
+        toolbar: [
             "create"
-        ],*/
+        ],
         groupable: true,
         sortable: true,
         resizable: true,
@@ -76,7 +82,7 @@
         filterable: {
             extra: false,
         },
-        //group: [{field: "id"}],
+        group: [{field: "person"}],
         columns: [{
             command: [{
                 name: "edit",
@@ -88,18 +94,22 @@
             title: "&nbsp;",
             width: 200
         }, {
-            field: "id",
-            title: labels.grid_column_id,
-            width: 150,
+            title: "&nbsp;",
+            filterable: false,
+            width: 32,
+            template: '#=window.getTypeIcon(type)#'
         }, {
             field: "type",
-            title: labels.grid_column_typeicon,
+            title: labels.grid_column_type,
             width: 150,
-            template: '#=window.getTypeIcon(type)#'
         }, {
             field: "data",
             title: labels.grid_column_data,
             width: 150
+        }, {
+            title: labels.grid_column_person,
+            width: 250,
+            template: '#=window.getPerson(person)#'
         }]
     });
 
