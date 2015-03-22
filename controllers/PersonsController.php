@@ -158,6 +158,11 @@ class PersonsController extends Controller
             ]);
     }
 
+    public function actionContacts()
+    {
+        return $this->render('contacts');
+    }
+
     // retireving person information from database
     private function getPersonInfo($person_id)
     {
