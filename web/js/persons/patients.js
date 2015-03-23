@@ -2,9 +2,22 @@
 
     window.showPreview = function (e) {
         e.preventDefault();
-
         var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
         location.href = links.person_preview + dataItem.id;
+    }
+
+    window.getAge = function (date) {
+        var 
+            now = moment(),
+            past = moment(date),
+            age = Math.abs(past.year() - now.year());
+        return isNaN(age) ? labels.grid_message_na : age;
+    }
+
+    window.getYesNo = function (value) {
+        if(typeof value == 'undefined' || value == null || value == '' || value == 0)
+            return labels.grid_message_no;
+        return labels.grid_message_yes;
     }
 
     $("#mainGrid").kendoGrid({
@@ -76,6 +89,21 @@
             extra: false,
         },
         columns: [{
+            field: "id",
+            title: labels.grid_column_id,
+            width: 50,
+            locked: true
+        }, {
+            field: "first_name",
+            title: labels.grid_column_fname,
+            width: 115,
+            locked: true
+        }, {
+            field: "last_name",
+            title: labels.grid_column_lname,
+            width: 120,
+            locked: true
+        }, {
             command: [{
                 name: "edit",
                 text: labels.grid_button_edit
@@ -85,40 +113,96 @@
                 click: window.showPreview
             }],
             title: "&nbsp;",
-            width: 180
+            width: 180,
         }, {
-            field: "id",
-            title: labels.grid_column_id,
-            width: 50
+            field: "patient.photo",
+            title: labels.grid_column_photo,
+            width: 100,
+
         }, {
-            field: "first_name",
-            title: labels.grid_column_fname,
+            field: "patient.mother_name",
+            title: labels.grid_column_mother,
+            width: 130
+        }, {
+            title: labels.grid_column_age,
+            width: 50,
+            template: '#=window.getAge(patient.birthday)#'
+        }, {
+            field: "patient.birthday",
+            title: labels.grid_column_birthday,
+            width: 120
+        }, {
+            field: "patient.marital_status",
+            title: labels.grid_column_marital,
+            width: 130
+        }, {
+            field: "patient.children",
+            title: labels.grid_column_children,
+            width: 100
+        }, {
+            field: "patient.profession",
+            title: labels.grid_column_profession,
             width: 150
         }, {
-            field: "last_name",
-            title: labels.grid_column_lname,
+            field: "patient.graduation",
+            title: labels.grid_column_graduation,
             width: 150
         }, {
-            field: "ssrn",
-            title: labels.grid_column_ssrn,
+            field: "patient.occupation",
+            title: labels.grid_column_occupation,
             width: 150
         }, {
-            field: "id_number",
-            title: labels.grid_column_idnumber,
+            field: "patient.disability",
+            title: labels.grid_column_disability,
             width: 150
         }, {
-            field: "father_name",
-            title: labels.grid_column_fathername,
+            field: "patient.disability_subsidy",
+            title: labels.grid_column_subsidy,
+            width: 150,
+            template: '#=window.getYesNo(patient.disability_subsidy)#'
+        }, {
+            field: "patient.disability_proof",
+            title: labels.grid_column_proof,
             width: 150
         }, {
-            field: "address",
-            title: labels.grid_column_address,
+            field: "patient.application_form",
+            title: labels.grid_column_appform,
             width: 150
         }, {
-            field: "post_code",
-            title: labels.grid_column_post,
+            field: "patient.medication",
+            title: labels.grid_column_medicattion,
             width: 150
-        }]
+        }, {
+            field: "patient.doctor",
+            title: labels.grid_column_doctor,
+            width: 150
+        }, {
+            field: "patient.private_correspondence",
+            title: labels.grid_column_private,
+            width: 150,
+            template: '#=window.getYesNo(patient.private_correspondence)#'
+        }, {
+            // registration age
+            title: labels.grid_column_regage,
+            width: 150,
+            template: '#=window.getAge(patient.registered_since)#'
+        }, {
+            field: "patient.registered_since",
+            title: labels.grid_column_regsince,
+            width: 150
+        }, {
+            field: "patient.last_contact",
+            title: labels.grid_column_lastcontact,
+            width: 150
+        }, {
+            field: "patient.comments",
+            title: labels.grid_column_comments,
+            width: 150
+        }, {
+            field: "patient.sex",
+            title: labels.grid_column_sex,
+            width: 100
+        }, ]
     });
 
 })(jQuery))

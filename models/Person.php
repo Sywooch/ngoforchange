@@ -188,6 +188,38 @@ class Person extends ActiveRecord
     {
         return $this->hasMany(PersonContact::className(), ['person_id' => 'id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPatient()
+    {
+        return $this->hasOne(PersonDataPatient::className(), ['person_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOfficial()
+    {
+        return $this->hasOne(PersonDataOfficial::className(), ['person_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getFriend()
+    {
+        return $this->hasOne(PersonDataFriend::className(), ['person_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getVolunteer()
+    {
+        return $this->hasOne(PersonDataVolunteer::className(), ['person_id' => 'id']);
+    }
 }
 
 ?>

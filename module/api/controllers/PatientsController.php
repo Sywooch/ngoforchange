@@ -3,6 +3,7 @@
 namespace app\module\api\controllers;
 
 use app\components\ApiController;
+use app\models\Person;
 use app\models\PersonDataPatient;
 
 class PatientsController extends ApiController
@@ -17,16 +18,19 @@ class PatientsController extends ApiController
     	$patients = [];
 
     	if($id == '') {
-    		$patients = PersonDataPatient::find()
-    			->joinWith(['person', 'disabled'])
-    			->where(['tbl_disabled.id' => '1'])
+    		$patients = Person::find()
+    			->joinWith(['types'])
+    			->where(['person_type.model_name' => 'PersonDataPatient'])
+    			->joinWith(['patient'])
     			->asArray()
     			->all();
     	}
     	else {
-    		$patients = PersonDataPatient::find()
-    			->where(['id' => $id])
-    			->with(['types'])
+    		$patients = Person::find()
+    			->joinWith(['types'])
+    			->where(['person_type.model_name' => 'PersonDataPatient'])
+    			->andWhere(['person.id' => $id])
+    			->joinWith(['patient'])
     			->asArray()
     			->all();
     	}
