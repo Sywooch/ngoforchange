@@ -1,21 +1,21 @@
 <?php
-	$this->title = 'Medicines';
+	$this->title = Yii::t('app', 'Medicines');
 ?>
 <a
 	class="text-center btn btn-lg btn-info btn-block"
 	href="?r=medicines/store"
 	role="button">
-		Medicines Store
+		<?= Yii::t('app', 'Medicines Store') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=medicines/all"
 	role="button">
-		Medicines
+		<?= Yii::t('app', 'Medicines') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=medicines/moves"
 	role="button">
-		Medicines Movements
+		<?= Yii::t('app', 'Medicines Movements') ?>
 </a>

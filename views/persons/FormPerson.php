@@ -7,11 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Person */
 /* @var $form ActiveForm */
 
-if($isCreate)
-	$this->title = 'Create a Person';
-else
-	$this->title = 'Edit the Person';
-
+$this->title = $isCreate ? Yii::t('app', 'Register a member') : Yii::t('app', 'Edit the member');
 $this->registerJsFile(
 	'js/persons/formperson.js',
 	[

@@ -1,39 +1,39 @@
 <?php
-	$this->title = 'People';
+	$this->title = Yii::t('app', 'Members');
 ?>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/all"
 	role="button">
-		All People
+		<?= Yii::t('app','All Members') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/contacts"
 	role="button">
-		All Contacts
+		<?= Yii::t('app','All Contacts') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/patients"
 	role="button">
-		Patients
+		<?= Yii::t('app','Patients') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/volunteers"
 	role="button">
-		Volunteers
+		<?= Yii::t('app','Volunteers') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/friends"
 	role="button">
-		Friends
+		<?= Yii::t('app','Friends') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=persons/officials"
 	role="button">
-		Officials
+		<?= Yii::t('app','Officials') ?>
 </a>

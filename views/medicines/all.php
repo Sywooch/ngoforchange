@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'Medicines';
+	$this->title = Yii::t('app', 'Medicines');
 	$this->registerJsFile(
 		'js/medicines/all.js',
 		[
@@ -28,6 +28,6 @@ var links = {
 };
 </script>
 
-<h3>Medicines</h3>
+<h3><?= Yii::t('app', 'Medicines') ?></h3>
 <div id="mainGrid">
 </div>

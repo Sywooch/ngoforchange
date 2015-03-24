@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'All people';
+	$this->title = Yii::t('app', 'All members');
 	$this->registerJsFile(
 		'js/persons/all.js',
 		[
@@ -35,10 +35,10 @@ var links = {
 };
 </script>
 
-<h3>All people</h3>
+<h3><?= Yii::t('app','All members') ?></h3>
 <p>
 	<a id="" href="?r=persons/create" class="btn btn-success">
-		<?php echo Yii::t('app', 'Register a person'); ?>
+		<?php echo Yii::t('app', 'Register a member'); ?>
 	</a>
 </p>
 <div id="mainGrid">

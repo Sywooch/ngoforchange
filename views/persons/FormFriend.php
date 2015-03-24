@@ -6,16 +6,22 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonDataFriend */
 /* @var $form ActiveForm */
+
+if($isCreate)
+    $this->title = Yii::t('app', 'Register a friend');
+else
+    $this->title = Yii::t('app', 'Edit the friend');
+
 ?>
 <div class="FormFriend">
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <h1>Register a Friend</h1>
+        <h1><?= Yii::t('app', 'Register a friend') ?></h1>
 
-        <input type="text" id="model_name" name="model_name" value="PersonDataFriend" required="required" />
-        <input type="text" id="person_id" name="person_id" value="<?= $person_id ?>" />
-        <input type="text" id="step" name="step" value="<?= $step ?>" />
+        <input type="hidden" id="model_name" name="model_name" value="PersonDataFriend" required="required" />
+        <input type="hidden" id="person_id" name="person_id" value="<?= $person_id ?>" />
+        <input type="hidden" id="step" name="step" value="<?= $step ?>" />
         
         
         <div class="form-group">
@@ -31,17 +37,11 @@ use yii\widgets\ActiveForm;
                     'tabIndex' => '3',
                     'value' => $person_id
                 ]) ?>
-        <?= $form->field($model, 'ssrn') ?>
-        <?= $form->field($model, 'city') ?>
         <?= $form->field($model, 'registered_since') ?>
-        <?= $form->field($model, 'address') ?>
         <?= $form->field($model, 'comments') ?>
-        <?= $form->field($model, 'create_time') ?>
-        <?= $form->field($model, 'update_time') ?>
-        <?= $form->field($model, 'post_code') ?>
     
         <div class="form-group text-right">
-            <a href="?r=persons/all" class="btn btn-danger">Cancel</a>
+            <a href="?r=persons/all" class="btn btn-danger"><?= Yii::t('app', 'Cancel') ?></a>
             <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
             <?= Html::submitButton(Yii::t('app', 'Create and Continue'), ['class' => 'btn btn-success']) ?>
         </div>

@@ -126,6 +126,37 @@ class PersonsController extends Controller
 	    ]);
     }
 
+    public function actionEdit($person_id, $form)
+    {
+        $type = PersonType::find()
+            ->where(['form_name' => $form])
+            ->one();
+
+        if($type == null) {
+            throw new NotFoundHttpException('Form is not found.');
+        }
+
+        $person = Person::findOne($person_id);
+        if($type == null) {
+            throw new NotFoundHttpException('No person is not found.');
+        }
+
+        $classReflect = new \ReflectionClass('app\models\\'. $type->model_name);
+        $model = $classReflect->getMethod('findOne')->invoke(null, $person_id);
+
+        if($model == null) {
+            throw new NotFoundHttpException('Requested data is not found.');
+        }
+        
+        return $this->render($type->form_name, [
+                'isCreate' => false,
+                'person_id' => $person_id,
+                'person' => $person,
+                'model' => $model,
+                'step' => null
+            ]);
+    }
+
     public function actionView($person_id)
     {
         $person = Person::find()

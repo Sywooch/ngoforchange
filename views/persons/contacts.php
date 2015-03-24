@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'All contacts';
+	$this->title = Yii::t('app', 'All contacts');
 	$this->registerJsFile(
 		'js/persons/contacts.js',
 		[

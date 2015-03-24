@@ -6,6 +6,12 @@
         location.href = links.person_preview + dataItem.id;
     }
 
+    window.editPerson = function (e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        location.href = links.person_update + dataItem.id;
+    }
+
     window.getAge = function (date) {
         var 
             now = moment(),
@@ -70,12 +76,7 @@
             batch: true,
             pageSize: 20
         },
-        editable: {
-            mode: "popup",
-            createAt: "bottom",
-            confirmation: labels.grid_confirm_delete,
-            confirmDelete: "Yes"
-        },
+        editable: false,
         groupable: true,
         sortable: true,
         resizable: true,
@@ -106,7 +107,8 @@
         }, {
             command: [{
                 name: "edit",
-                text: labels.grid_button_edit
+                text: labels.grid_button_edit,
+                click: window.editPerson
             }, {
                 name: "custom",
                 text: labels.grid_button_preview,

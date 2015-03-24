@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'Patients';
+	$this->title = Yii::t('app', 'Patients');
 	$this->registerJsFile(
 		'js/persons/patients.js',
 		[
@@ -46,13 +46,12 @@ var labels = {
 
 var links = {
 	"person_read": "?r=api/patients/index",
-	"person_update": "?r=api/persons/update",
-	"person_destroy": "?r=api/persons/destroy",
+	"person_update": "?r=persons/edit&form=formpatient&person_id=",
 	"person_preview": "?r=persons/view&person_id="
 };
 </script>
 
-<h3>Patients</h3>
+<h3><?= Yii::t('app', 'Patients') ?></h3>
 <p>
 	<a id="" href="?r=persons/create" class="btn btn-success">
 		<?php echo Yii::t('app', 'Register a person'); ?>

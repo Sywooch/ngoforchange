@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'EENOSIMS',
+                'brandLabel' => Yii::t('app', 'EENOSIMS'),
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -34,29 +34,35 @@ AppAsset::register($this);
             ]);
 
             $items = array();
-            array_push($items, ['label' => 'Home', 'url' => ['/site/index']]);
+            array_push($items, [
+                'label' => Yii::t('app', 'Home'),
+                'url' => ['/site/index']
+                ]);
 
             if(Yii::$app->user->isGuest) {
-                array_push($items, ['label' => 'Login', 'url' => ['/site/login']]);
+                array_push($items, [
+                    'label' => Yii::t('app', 'Login'),
+                    'url' => ['/site/login']
+                    ]);
             } else {
                 array_push($items, [
-                    'label' => 'Entries',
+                    'label' => Yii::t('app', 'Entries'),
                     'items' => [
-                        ['label' => 'People', 'url' => ['/persons']],
-                        ['label' => 'Medicines', 'url' => ['/medicines']],
-                        ['label' => 'Events', 'url' => ['/events']],
-                        ['label' => 'Invoices', 'url' => ['/invoices']]
+                        ['label' => Yii::t('app', 'Members'), 'url' => ['/persons']],
+                        ['label' => Yii::t('app', 'Medicines'), 'url' => ['/medicines']],
+                        ['label' => Yii::t('app', 'Events'), 'url' => ['/events']],
+                        ['label' => Yii::t('app', 'Invoices'), 'url' => ['/invoices']]
                     ]]);
                 array_push($items, [
-                    'label' => 'Reports',
+                    'label' => Yii::t('app', 'Reports'),
                     'items' => [
-                        ['label' => 'Activity', 'url' => ['/report/activity']],
-                        ['label' => 'Data Integrity', 'url' => ['/report/dataintegrity']],
-                        ['label' => 'Invoices', 'url' => ['/report/invoices']],
-                        ['label' => 'Medicines Usage', 'url' => ['/report/all']]
+                        ['label' => Yii::t('app', 'Activity'), 'url' => ['/report/activity']],
+                        ['label' => Yii::t('app', 'Data Integrity'), 'url' => ['/report/dataintegrity']],
+                        ['label' => Yii::t('app', 'Invoices'), 'url' => ['/report/invoices']],
+                        ['label' => Yii::t('app', 'Medicine Usage'), 'url' => ['/report/all']]
                     ]]);
                 array_push($items, [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('app', 'Logout').' ('. Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']]);
             }
@@ -78,7 +84,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; EENOSIMS NGO <?= date('Y') ?>.</p>
+            <p class="pull-left">&copy; <?= Yii::t('app', 'EENOSIMS NGO') ?> <?= date('Y') ?>.</p>
         </div>
     </footer>
 

@@ -4,12 +4,64 @@
 		"selected_items":
 		[
 			[
-				"id",
-				"id_number"
+				"grid_mes",
+				"grid_message_no"
+			],
+			[
+				"Person",
+				"PersonDataPatient"
+			],
+			[
+				"pers",
+				"person_type"
+			],
+			[
+				"join",
+				"joinWith"
+			],
+			[
+				"Perso",
+				"PersonDateFriend"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"per",
+				"person_id"
 			],
 			[
 				"perso",
 				"person_id"
+			],
+			[
+				"person",
+				"person"
+			],
+			[
+				"data",
+				"dataItem"
+			],
+			[
+				"w",
+				"window"
+			],
+			[
+				"gri",
+				"grid_button_edit"
+			],
+			[
+				"grd",
+				"grid_column_address"
+			],
+			[
+				"grid_co",
+				"grid_column_fname"
+			],
+			[
+				"id",
+				"id_number"
 			],
 			[
 				"valid",
@@ -36,10 +88,6 @@
 				"steps_last"
 			],
 			[
-				"pers",
-				"person_id"
-			],
-			[
 				"post",
 				"post"
 			],
@@ -48,28 +96,12 @@
 				"model_name"
 			],
 			[
-				"Perso",
-				"Person"
-			],
-			[
 				"ass",
 				"assign_new"
 			],
 			[
 				"type",
 				"type_id"
-			],
-			[
-				"Person",
-				"Person"
-			],
-			[
-				"person",
-				"person_id"
-			],
-			[
-				"per",
-				"person_id"
 			],
 			[
 				"for",
@@ -122,10 +154,6 @@
 			[
 				"RSP",
 				"RSP_DATA"
-			],
-			[
-				"gri",
-				"grid_read"
 			],
 			[
 				"noti",
@@ -184,18 +212,10 @@
 	"buffers":
 	[
 		{
-			"file": "views/persons/FormPerson.php",
+			"file": "controllers/PersonsController.php",
 			"settings":
 			{
-				"buffer_size": 2575,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/Person.php",
-			"settings":
-			{
-				"buffer_size": 5509,
+				"buffer_size": 6822,
 				"line_ending": "Windows"
 			}
 		}
@@ -243,6 +263,9 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
@@ -251,13 +274,50 @@
 	],
 	"file_history":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/patients.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/patients.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/assets/AppAsset.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/assets/MomentAsset.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/composer.json",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/.bowerrc",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PatientsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/volunteers.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/officials.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/friends.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/invoices/goods.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/invoices/pays.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/invoices/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/invoices/cashs.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/invoices/balance.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/events/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/events/promotions.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/events/elections.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/InvoicesController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/EventsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/css/site.css",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/view.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormOfficial.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/contacts.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/contacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/ContactsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/params.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/messages/gr_GR/app.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/view.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormFriend.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormVolunteer.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormSummary.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonSummary.php",
@@ -269,29 +329,21 @@
 		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-mpm.conf",
 		"/C/wamp/bin/apache/apache2.4.9/conf/wampserver.conf",
 		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataRelative.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataVolunteer.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormContacts.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonContact.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/formperson.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
 		"/C/Users/ShaderZAK/Desktop/kendo.culture.el.js",
 		"/C/Users/ShaderZAK/Desktop/kendo.culture.el-GR.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/database/eenosims-2015-03-17.sql",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/info.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormFriend.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/FormPerson.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonType.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/person/all.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/all.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/MedicinesController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/all.js",
@@ -312,7 +364,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/list.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/db.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/DefaultController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PatientsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/views/default/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/web.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/modules.php",
@@ -323,7 +374,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Elections.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/CashReceipt.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/ElectionsVotes.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
@@ -351,38 +401,11 @@
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines.js",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.mobile.min.css",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.min.css",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/commands/HelloController.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/web.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/console.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/index.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/links.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/grid/toolbar-template.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/grid/sorting.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/index.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/sitemap.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/SiteController.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/params.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/messages/gr/core.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/config/db.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/Medicine.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/ReportController.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/ApiController",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/ContactForm.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/about.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/report/index.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/report.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/User.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/site/login.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/models/LoginForm.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/api.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/events.php",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/images.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/css/site.css",
-		"/C/Users/ShaderZAK/Desktop/Новая папка/wrappers/php/button/keyboard-navigation.php"
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/commands/HelloController.php"
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -396,6 +419,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"person_id",
+			"selectedTypes",
+			"id_",
+			"ssrn",
+			"city",
+			"post",
+			"address",
+			"glyphicons",
+			"png",
+			"dataSource",
+			"person",
+			"titleFilter",
+			"cityFilter",
 			"''))\n",
 			"php",
 			"directory",
@@ -413,6 +449,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"contact",
 			""
 		],
 		"reverse": false,
@@ -424,53 +461,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/persons/FormPerson.php",
+					"file": "controllers/PersonsController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2575,
+						"buffer_size": 6822,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								542,
-								542
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "models/Person.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 5509,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1360,
-								1360
+								3790,
+								3790
 							]
 						],
 						"settings":
@@ -480,7 +488,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 585.0,
+						"translation.y": 1755.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -527,7 +535,7 @@
 	"project": "ngoforchange.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -562,7 +570,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 207.0,
+	"side_bar_width": 218.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

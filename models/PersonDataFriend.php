@@ -35,11 +35,10 @@ class PersonDataFriend extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'ssrn', 'city', 'registered_since'], 'required'],
+            [['person_id', 'registered_since'], 'required'],
             [['person_id'], 'integer'],
-            [['address', 'comments'], 'string'],
+            [[ 'comments'], 'string'],
             [['registered_since', 'create_time', 'update_time'], 'safe'],
-            [['ssrn', 'post_code', 'city'], 'string', 'max' => 255]
         ];
     }
 
@@ -50,10 +49,6 @@ class PersonDataFriend extends \yii\db\ActiveRecord
     {
         return [
             'person_id' => Yii::t('app', 'Person ID'),
-            'ssrn' => Yii::t('app', 'Ssrn'),
-            'address' => Yii::t('app', 'Address'),
-            'post_code' => Yii::t('app', 'Post Code'),
-            'city' => Yii::t('app', 'City'),
             'registered_since' => Yii::t('app', 'Registered Since'),
             'comments' => Yii::t('app', 'Comments'),
             'create_time' => Yii::t('app', 'Create Time'),

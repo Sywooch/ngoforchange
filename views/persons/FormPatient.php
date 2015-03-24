@@ -6,12 +6,15 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonDataPatient */
 /* @var $form ActiveForm */
+
+$this->title = $isCreate ? Yii::t('app', 'Register a patient') : Yii::t('app', 'Edit the patient');
+
 ?>
 <div class="FormPatient">
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <h1>Register a Patient</h1>
+        <h1><?= $this->title ?></h1>
 
         <input type="hidden" id="model_name" name="model_name" value="PersonDataPatient" required="required" />
         <input type="hidden" id="person_id" name="person_id" value="<?= $person_id ?>" />
