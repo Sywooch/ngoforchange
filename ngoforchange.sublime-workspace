@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"form_title"
+			],
+			[
+				"edi",
+				"editPerson"
+			],
+			[
+				"person",
+				"person_id"
+			],
+			[
 				"grid_mes",
 				"grid_message_no"
 			],
@@ -34,10 +46,6 @@
 			[
 				"perso",
 				"person_id"
-			],
-			[
-				"person",
-				"person"
 			],
 			[
 				"data",
@@ -212,10 +220,26 @@
 	"buffers":
 	[
 		{
-			"file": "controllers/PersonsController.php",
+			"file": "models/PersonDataPatient.php",
 			"settings":
 			{
-				"buffer_size": 6822,
+				"buffer_size": 2738,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/persons/FormPatient.php",
+			"settings":
+			{
+				"buffer_size": 2597,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/js/persons/formpatient.js",
+			"settings":
+			{
+				"buffer_size": 872,
 				"line_ending": "Windows"
 			}
 		}
@@ -263,9 +287,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
@@ -274,8 +295,25 @@
 	],
 	"file_history":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/patients.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/formpatient.js",
+		"/C/Users/ShaderZAK/Desktop/Θεσσαλονίκης 36.txt",
+		"/D/Sevak/database  - eenosims (1).sql",
+		"/D/Sevak/check.sql",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/messages/gr_GR/app.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/patients.js",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/patients.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormSummary.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormFriend.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/contacts.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/index.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/all.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/assets/AppAsset.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/assets/MomentAsset.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/composer.json",
@@ -298,28 +336,17 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/events/elections.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/InvoicesController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/EventsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/css/site.css",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/view.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormOfficial.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/layouts/main.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/contacts.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/contacts.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/ContactsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/params.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/messages/gr_GR/app.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/view.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormFriend.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormVolunteer.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormSummary.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonSummary.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormThanks.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormContacts.php",
@@ -347,9 +374,7 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/MedicinesController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/person/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/all.js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/MedicinesController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/all.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/medicines/moves.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/medicines/store.js",
@@ -397,11 +422,7 @@
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/all.js",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/KendoAsset.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/EntriesController.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/AppAsset.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines.js",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.mobile.min.css",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/kendo-ui/styles/kendo.material.min.css",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/commands/HelloController.php"
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/AppAsset.php"
 	],
 	"find":
 	{
@@ -461,24 +482,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "controllers/PersonsController.php",
+					"file": "models/PersonDataPatient.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6822,
+						"buffer_size": 2738,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3790,
-								3790
+								1451,
+								1451
 							]
 						],
 						"settings":
@@ -488,7 +509,65 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1755.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/persons/FormPatient.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web/js/persons/formpatient.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								637,
+								637
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

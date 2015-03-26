@@ -22,5 +22,5 @@ return [
     	'LinkedIn' => 'images/glyphs-social/social-18-linked-in.png',
     	'GooglePlus' => 'images/glyphs-social/social-3-google-plus.png',
     	'Pinterest' => 'images/glyphs-social/social-1-pinterest.png'
-    ]
+    ],
 ];

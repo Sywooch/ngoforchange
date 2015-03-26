@@ -43,11 +43,13 @@ class PersonDataPatient extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'mother_name', 'disability'], 'required'],
-            [['person_id', 'children', 'private_correspondence'], 'integer'],
-            [['photo', 'disability', 'disability_proof', 'application_form', 'medication', 'comments'], 'string'],
+            [['person_id', 'mother_name', 'disability', 'registered_since'], 'required'],
+            [['person_id', 'children', 'disability', 'private_correspondence', 'email_subscribe', 'disability_subsidy'], 'integer'],
             [['last_contact', 'create_time', 'update_time'], 'safe'],
-            [['mother_name', 'sex', 'marital_status', 'graduation', 'occupation'], 'string', 'max' => 255],
+            [['mother_name', 'sex', 'marital_status', 'profession', 'graduation', 'occupation', 'doctor', 'health_insurance'], 'string', 'max' => 255],
+            [['comments'], 'string'],
+            [['registered_since', 'birthday'], 'date'],
+            [['photo', 'disability_proof', 'application_form'], 'file'],
         ];
     }
 
@@ -61,19 +63,23 @@ class PersonDataPatient extends \yii\db\ActiveRecord
             'photo' => Yii::t('app', 'Photo'),
             'mother_name' => Yii::t('app', 'Mother Name'),
             'sex' => Yii::t('app', 'Sex'),
+            'birthday' => Yii::t('app', 'Birthday'),
             'marital_status' => Yii::t('app', 'Marital Status'),
             'children' => Yii::t('app', 'Children'),
+            'profession' => Yii::t('app', 'Profession'),
             'graduation' => Yii::t('app', 'Graduation'),
             'occupation' => Yii::t('app', 'Occupation'),
-            'disability' => Yii::t('app', 'Disability'),
+            'disability' => Yii::t('app', 'Disability (%)'),
+            'disability_subsidy' => Yii::t('app', 'Disability Subsidied (€)'),
             'disability_proof' => Yii::t('app', 'Disability Proof'),
             'application_form' => Yii::t('app', 'Application Form'),
-            'medication' => Yii::t('app', 'Medication'),
+            'doctor' => Yii::t('app', 'Doctor'),
+            'health_insurance' => Yii::t('app', 'Health Insurance'),
             'private_correspondence' => Yii::t('app', 'Private Correspondence'),
+            'email_subscribe' => Yii::t('app', 'Email Subscription'),
+            'registered_since' => Yii::t('app', 'Registered since'),
             'last_contact' => Yii::t('app', 'Last Contact'),
             'comments' => Yii::t('app', 'Comments'),
-            'create_time' => Yii::t('app', 'Create Time'),
-            'update_time' => Yii::t('app', 'Update Time'),
         ];
     }
 

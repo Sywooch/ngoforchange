@@ -95,6 +95,12 @@
 		'Person has' => '',
 		'assignments' => '',
 		'Person\'s ID is' => '',
+
+
+		// ----------------------------------------
+		'Select a photo' => '',
+    	'Select the proof for disability' => '',
+    	'Select the filled application form' => '',
 	];
 ?>
 

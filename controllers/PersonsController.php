@@ -153,7 +153,7 @@ class PersonsController extends Controller
                 'person_id' => $person_id,
                 'person' => $person,
                 'model' => $model,
-                'step' => null
+                'step' => null,
             ]);
     }
 
