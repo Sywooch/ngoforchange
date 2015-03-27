@@ -293,6 +293,7 @@ if (kendo.ui.Groupable) {
 kendo.ui.Groupable.prototype.options.messages =
 $.extend(true, kendo.ui.Groupable.prototype.options.messages,{
   "empty": "Drag a column header and drop it here to group by that column"
+  //"empty": "Σύρετε μια κεφαλίδα στήλης και αφήστε τον εδώ στην ομάδα από αυτή τη στήλη"
 });
 }
 

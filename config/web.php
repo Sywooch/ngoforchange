@@ -7,7 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'name' => 'EENOSIMS',
-    'language' => 'gr_GR',
+    'language' => 'en_US', //'language' => 'gr_GR',
     'bootstrap' => ['log'],
     'modules' => $modules,
     'components' => [
