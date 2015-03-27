@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"List",
+				"ListMaritalStatus"
+			],
+			[
+				"list",
+				"list_sex"
+			],
+			[
+				"pro",
+				"profession"
+			],
+			[
 				"form",
 				"form_title"
 			],
@@ -220,26 +232,35 @@
 	"buffers":
 	[
 		{
-			"file": "models/PersonDataPatient.php",
+			"file": "views/persons/FormPatient.php",
 			"settings":
 			{
-				"buffer_size": 2738,
+				"buffer_size": 3725,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/persons/FormPatient.php",
+			"file": "components/Normalizer.php",
 			"settings":
 			{
-				"buffer_size": 2597,
-				"line_ending": "Unix"
+				"buffer_size": 536,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "messages/gr_GR/app.php",
+			"settings":
+			{
+				"buffer_size": 2238,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "web/js/persons/formpatient.js",
 			"settings":
 			{
-				"buffer_size": 872,
+				"buffer_size": 892,
 				"line_ending": "Windows"
 			}
 		}
@@ -285,6 +306,8 @@
 	"expanded_folders":
 	[
 		"/C/Projects_Git_ShaderZAK/ngoforchange",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/components",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
@@ -295,11 +318,15 @@
 	],
 	"file_history":
 	[
+		"/C/Projects_Git_ShaderZAK/ngoforchange/components/Utilities.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/config/params.php",
+		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
+		"/C/Users/ShaderZAK/Desktop/greek",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/formpatient.js",
 		"/C/Users/ShaderZAK/Desktop/Θεσσαλονίκης 36.txt",
 		"/D/Sevak/database  - eenosims (1).sql",
 		"/D/Sevak/check.sql",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormPerson.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/messages/gr_GR/app.php",
@@ -320,7 +347,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/.bowerrc",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PatientsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataPatient.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonTypeAssign.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/site/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/volunteers.php",
@@ -341,7 +367,6 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons/FormOfficial.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/contacts.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/ContactsController.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/config/params.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Contacts.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/PersonsController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/all.js",
@@ -420,9 +445,7 @@
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/layouts/main.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/entries/medicines.php",
 		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/all.js",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/KendoAsset.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/EntriesController.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/AppAsset.php"
+		"/C/Projects_Svn_Assembla/trunk/ngoforchange/assets/KendoAsset.php"
 	],
 	"find":
 	{
@@ -482,24 +505,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "models/PersonDataPatient.php",
+					"file": "views/persons/FormPatient.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2738,
+						"buffer_size": 3725,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1451,
-								1451
+								3321,
+								3321
 							]
 						],
 						"settings":
@@ -509,34 +532,33 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "views/persons/FormPatient.php",
+					"file": "components/Normalizer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2597,
+						"buffer_size": 536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								314,
-								314
+								5,
+								5
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -547,19 +569,48 @@
 				},
 				{
 					"buffer": 2,
-					"file": "web/js/persons/formpatient.js",
+					"file": "messages/gr_GR/app.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 872,
+						"buffer_size": 2238,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								637,
-								637
+								2228,
+								2228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1219.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "web/js/persons/formpatient.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
 							]
 						],
 						"settings":
@@ -570,7 +621,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -649,7 +700,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 218.0,
+	"side_bar_width": 189.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

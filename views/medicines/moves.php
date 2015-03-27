@@ -1,5 +1,5 @@
 <?php
-	$this->title = "Medicines Movements";
+	$this->title = Yii::t('app', 'Medicines Movements');
 	$this->registerJsFile(
 		'js/medicines/moves.js',
 		[
@@ -13,9 +13,14 @@ var labels = {
 	"edit": "<?php echo Yii::t('app', 'Edit'); ?>",
 	"destroy": "<?php echo Yii::t('app', 'Delete'); ?>",
 
-	"grid_column_name": "<?php echo Yii::t('app', 'Medicine Name'); ?>",
-	"grid_column_unit": "<?php echo Yii::t('app', 'Unit'); ?>",
-	"grid_column_details": "<?php echo Yii::t('app', 'Details'); ?>",
+	"grid_column_id": "<?php echo Yii::t('app', 'ID'); ?>",
+    "grid_column_action": "<?php echo Yii::t('app', 'Action'); ?>",
+    "grid_column_actdate": "<?php echo Yii::t('app', 'Action Date'); ?>",
+    "grid_column_count": "<?php echo Yii::t('app', 'Count'); ?>",
+    "grid_column_expdate": "<?php echo Yii::t('app', 'Expiration Date'); ?>",
+    "grid_column_movreason": "<?php echo Yii::t('app', 'Reason'); ?>",
+    "grid_column_fname": "<?php echo Yii::t('app', 'First Name'); ?>",
+    "grid_column_lname": "<?php echo Yii::t('app', 'Last Name'); ?>",
 
 	"grid_confirm_delete": "<?php echo Yii::t('app', 'Are you sure that you want to delete this record?'); ?>"
 };
@@ -26,6 +31,6 @@ var links = {
 };
 </script>
 
-<h3>Medicines - Movements</h3>
+<h3><?= Yii::t('app', 'Medicines - Movements') ?></h3>
 <div id="mainGrid">
 </div>

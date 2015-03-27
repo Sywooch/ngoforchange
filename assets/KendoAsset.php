@@ -20,6 +20,7 @@ class KendoAsset extends AssetBundle
     public $sourcePath = '@bower/kendo-ui';
     public $js = [
         'js/kendo.all.min.js',
+        '../../../js/kendo.messages.el-GR.js',
     ];
     public $css = [
     	'styles/kendo.common.min.css',

@@ -115,7 +115,7 @@
                 click: window.showPreview
             }],
             title: "&nbsp;",
-            width: 180,
+            width: 220,
         }, {
             field: "patient.photo",
             title: labels.grid_column_photo,

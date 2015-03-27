@@ -53,7 +53,7 @@
 		'Profession' => 'Επάγγελμα',
 		'Graduation' => 'Σπουδές',
 		'Occupation' => 'Απασχόληση',
-		'Disability' => 'Αναπηρία (%)',
+		'Disability' => 'Αναπηρία',
 		'Disability Subsidy' => 'Επίδομα',
 		'Disability Proof' => 'Πιστοποιητικό',
 		'Application Form' => 'Αίτηση Εγγραφής',
@@ -72,10 +72,21 @@
 		'Medicines Store' => 'Φαρμακαποθήκη',
 		'Medicines Movements' => 'Κίνηση Φαρμάκων',
 		'New medicine' => 'Καταχώρηση Νέου Φαρμάκου',
+		'Med. ID' => '',
 		'Medicine Name' => 'Όνομα Φαρμάκου',
 		'Unit' => 'Μονάδα μέτρησης',
 		'Details' => 'Λεπτομέρειες',
 		'message' => 'Πληροφοριακό μήνυμα',
+    	'Action' => '',
+    	'Action Date' => '',
+	    'Count' => '',
+	    'Expiration Date' => '',
+	    'Stock Count' => '',
+	    'Reason' => '',
+	    'Expired' => '',
+	    'About to Expire' => '',
+	    'expiration' => '',
+	    'Please pay attention to following medicines' => '',
 		
 		// members part - μέλη 
 		'Members' => 'Μέλη',
@@ -97,9 +108,11 @@
 		'assignments' => 'αναθέσεις',
 		'Person\'s ID is' => 'Ο Α.Μ. του μέλους είναι: ',
 		
+
+
 		//HOME PAGE - ΑΡΧΙΚΗ ΣΕΛΙΔΑ
 		//=========================
-		'Welcome admin!' => 'Καλωσόρισες Διαχειριστή',
+		'Welcome' => 'Καλωσόρισες',
 		// People menu - Μενού  μελών
 		'People' => 'ΜΕΛΗ',
 		'All persons' => 'Όλα τα μέλη',
@@ -122,7 +135,7 @@
 		//Invoices Menu - Μενού παραστατικών
 		'Invoices' => 'Παραστατικά',
 		'Cash receipts' => 'Αποδείξεις Είσπραξης',    //receipt EEASKP produces when gets money (ballance += cash receipt)
-		'Payment receipt' => 'Αποδείξεις Πληρωμής',   //receipt EEASKP produces when gives money (balance -= pay receipt)
+		'Payment receipts' => 'Αποδείξεις Πληρωμής',   //receipt EEASKP produces when gives money (balance -= pay receipt)
 		'Good receipts' => 'Αποδείξεις αγορών',       //receipt that comes to EEASKP when buys goods (ballance -= goods receipt)
 		
 		//People->Patiens subpage - Υποσελίδα Ασθενών
@@ -141,6 +154,15 @@
 		'Select a photo' => '',
     	'Select the proof for disability' => '',
     	'Select the filled application form' => '',
+
+    	'Welcome!' => '',
+    	'Welcome EENOSIMS' => '',
+    	'Dear visitor please login in order to continue.' => '',
+    	'Login' => '',
+    	'Current balance' => '',
+    	'Email Subscription' => '',
+    	'All events' => '',
+    	
 	];
 ?>
 

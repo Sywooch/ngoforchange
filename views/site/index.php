@@ -1,15 +1,15 @@
 <?php
 /* @var $this yii\web\View */
-$this->title .= 'Welcome EENOSIMS';
+$this->title .= Yii::t('app', 'Welcome EENOSIMS');
 ?>
 <div class="site-index">
 
 <?php if(Yii::$app->user->isGuest) : ?>
 <!-- Just a Guest -->
     <div class="jumbotron">
-        <h1>Welcome!</h1>
-        <p class="lead">Dear visitor please login in order to continue.</p>
-        <p><a class="btn btn-lg btn-success" href="?r=site/login">Login</a></p>
+        <h1><?= Yii::t('app', 'Welcome!') ?></h1>
+        <p class="lead"><?= Yii::t('app', 'Dear visitor please login in order to continue.') ?></p>
+        <p><a class="btn btn-lg btn-success" href="?r=site/login"><?= Yii::t('app', 'Login') ?></a></p>
     </div>
 <?php endif; ?>
 
@@ -17,20 +17,20 @@ $this->title .= 'Welcome EENOSIMS';
 <?php if(!Yii::$app->user->isGuest) : ?>
 <!-- Definitely you are NOT guest -->
     <div class="jumbotron">
-        <h2>Welcome <?php echo Yii::$app->user->identity->username; ?>!</h2>
+        <h2><?= Yii::t('app', 'Welcome') ?> <?php echo Yii::$app->user->identity->username; ?>!</h2>
         <div class="row ">
             <div class="col-xs-12 col-sm-4 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">People</h3>
+                        <h3 class="panel-title"><?= Yii::t('app', 'Members') ?></h3>
                     </div>
                     <div class="panel-body">
-                        <div><a href="?r=persons/all">All persons</a></div>
-                        <div><a href="?r=persons/contacts">All contacts</a></div>
-                        <div><a href="?r=persons/patients">Patients</a></div>
-                        <div><a href="?r=persons/volunteers">Volunteers</a></div>
-                        <div><a href="?r=persons/friends">Friends</a></div>
-                        <div><a href="?r=persons/officials">Officials</a></div>
+                        <div><a href="?r=persons/all"><?= Yii::t('app', 'All members') ?></a></div>
+                        <div><a href="?r=persons/contacts"><?= Yii::t('app', 'All contacts') ?></a></div>
+                        <div><a href="?r=persons/patients"><?= Yii::t('app', 'Patients') ?></a></div>
+                        <div><a href="?r=persons/volunteers"><?= Yii::t('app', 'Volunteers') ?></a></div>
+                        <div><a href="?r=persons/friends"><?= Yii::t('app', 'Friends') ?></a></div>
+                        <div><a href="?r=persons/officials"><?= Yii::t('app', 'Officials') ?></a></div>
                     </div>
                     <div class="panel-footer">&nbsp;</div>
                 </div>
@@ -38,12 +38,12 @@ $this->title .= 'Welcome EENOSIMS';
             <div class="col-xs-12 col-sm-4 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Medicines</h3>
+                        <h3 class="panel-title"><?= Yii::t('app', 'Medicines') ?></h3>
                     </div>
                     <div class="panel-body">
-                        <div><a href="?r=medicines/all">All medicines</a></div>
-                        <div><a href="?r=medicines/moves">Medicines movements</a></div>
-                        <div><a href="?r=medicines/store">Medicines store</a></div>
+                        <div><a href="?r=medicines/all"><?= Yii::t('app', 'All medicines') ?></a></div>
+                        <div><a href="?r=medicines/moves"><?= Yii::t('app', 'Medicines movements') ?></a></div>
+                        <div><a href="?r=medicines/store"><?= Yii::t('app', 'Medicines store') ?></a></div>
                     </div>
                     <div class="panel-footer">&nbsp;</div>
                 </div>
@@ -51,11 +51,11 @@ $this->title .= 'Welcome EENOSIMS';
             <div class="col-xs-12 col-sm-4 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Events</h3>
+                        <h3 class="panel-title"><?= Yii::t('app', 'Events') ?></h3>
                     </div>
                     <div class="panel-body">
-                        <div><a href="?r=events/elections">Elections</a></div>
-                        <div><a href="?r=events/promotions">Promotions</a></div>
+                        <div><a href="?r=events/elections"><?= Yii::t('app', 'Elections') ?></a></div>
+                        <div><a href="?r=events/promotions"><?= Yii::t('app', 'All events') ?></a></div>
                     </div>
                     <div class="panel-footer">&nbsp;</div>
                 </div>
@@ -63,13 +63,13 @@ $this->title .= 'Welcome EENOSIMS';
             <div class="col-xs-12 col-sm-4 col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Invoices</h3>
+                        <h3 class="panel-title"><?= Yii::t('app', 'Invoices') ?></h3>
                     </div>
                     <div class="panel-body">
-                        <div><a href="?r=invoices/cashs">Cash receipts</a></div>
-                        <div><a href="?r=invoices/pays">Payment receipts</a></div>
-                        <div><a href="?r=invoices/goods">Good receipts</a></div>
-                        <div><a href="?r=invoices/balance">Current Balance</a></div>
+                        <div><a href="?r=invoices/cashs"><?= Yii::t('app', 'Cash receipts') ?></a></div>
+                        <div><a href="?r=invoices/pays"><?= Yii::t('app', 'Payment receipts') ?></a></div>
+                        <div><a href="?r=invoices/goods"><?= Yii::t('app', 'Good receipts') ?></a></div>
+                        <div><a href="?r=invoices/balance"><?= Yii::t('app', 'Current Balance') ?></a></div>
                     </div>
                     <div class="panel-footer">&nbsp;</div>
                 </div>

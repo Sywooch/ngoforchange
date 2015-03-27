@@ -1,3 +1,3 @@
 <?php
-	$this->title = 'Promotions';
+	$this->title = Yii::t('app', 'All events');
 ?>

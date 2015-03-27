@@ -100,7 +100,7 @@
                 click: window.showPreview
             }],
             title: "&nbsp;",
-            width: 270
+            width: 319
         }, {
             field: "id",
             title: labels.grid_column_id,

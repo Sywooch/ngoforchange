@@ -1,4 +1,4 @@
 <?php
-	$this->title = 'Payment Receipts';
+	$this->title = Yii::t('app', 'Payment receipts');
 ?>
-<h1>Payment Receipts</h1>
+<h1><?= Yii::t('app', 'Payment receipts') ?></h1>

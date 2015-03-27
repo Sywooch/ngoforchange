@@ -94,14 +94,14 @@
             title: "&nbsp;",
             width: 200
         }, {
+            field: "type",
+            title: labels.grid_column_type,
+            width: 150,
+        }, {
             title: "&nbsp;",
             filterable: false,
             width: 32,
             template: '#=window.getTypeIcon(type)#'
-        }, {
-            field: "type",
-            title: labels.grid_column_type,
-            width: 150,
         }, {
             field: "data",
             title: labels.grid_column_data,

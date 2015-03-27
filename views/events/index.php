@@ -1,15 +1,15 @@
 <?php
-	$this->title = 'Events';
+	$this->title = Yii::t('app', 'Events');
 ?>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=events/elections"
 	role="button">
-		Elections
+		<?= Yii::t('app', 'Elections') ?>
 </a>
 <a
 	class="text-center btn btn-lg btn-default btn-block"
 	href="?r=events/promotions"
 	role="button">
-		Promotions
+		<?= Yii::t('app', 'All events') ?>
 </a>

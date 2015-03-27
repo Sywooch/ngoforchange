@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'Medicines';
+	$this->title = Yii::t('app', 'Medicines');
 	$this->registerJsFile(
 		'js/medicines/store.js',
 		[
@@ -36,12 +36,12 @@ var links = {
 };
 </script>
 
-<h3>Medicine Store</h3>
+<h3><?= Yii::t('app', 'Medicine Store') ?></h3>
 <div id="alertExpire" class="alert alert-danger hide" role="alert">
-    <b>Expired:</b> <span class="msg"></span>
+    <b><?= Yii::t('app', 'Expired') ?>:</b> <span class="msg"></span>
 </div>
 <div id="warnExpire" class="alert alert-warning hide" role="alert">
-	<b>About to Expire:</b> <span class="msg"></span>
+	<b><?= Yii::t('app', 'About to Expire') ?>:</b> <span class="msg"></span>
 </div>
 
 <div id="mainGrid">

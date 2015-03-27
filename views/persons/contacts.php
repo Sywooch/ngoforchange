@@ -37,6 +37,6 @@ var links = {
 var contactTypeIcons = <?php echo json_encode(Yii::$app->params['contactTypeIcons']) ?>;
 </script>
 
-<h3>All contacts</h3>
+<h3><?= Yii::t('app', 'All contacts') ?></h3>
 <div id="mainGrid">
 </div>
