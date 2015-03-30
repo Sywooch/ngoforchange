@@ -1,13 +1,14 @@
 $(document).ready(function() {
     
-	$("#persondatapatient-photo").kendoUpload({
+	$("#persondatapatient-photo_file").kendoUpload({
 		localization: {
 			select: labels.photo_select,
         },
         select: function (event) {
 		    var notAllowed = false;
 		    $.each(event.files, function (index, value) {
-		        if (value.extension !== '.csv') {
+		        if (value.extension !== '.jpg' &&
+		        	value.extension !== '.png') {
 		            alert("not allowed!");
 		            notAllowed = true;
 		        }
@@ -20,12 +21,12 @@ $(document).ready(function() {
 		    if (notAllowed == true) event.preventDefault();
 		}   
 	});
-	$("#persondatapatient-disability_proof").kendoUpload({
+	$("#persondatapatient-disability_proof_file").kendoUpload({
 		localization: {
 			select: labels.disability_select,
 		}
 	});
-	$("#persondatapatient-application_form").kendoUpload({
+	$("#persondatapatient-application_form_file").kendoUpload({
 		localization: {
 			select: labels.application_select,
 		}

@@ -26,6 +26,14 @@
         return labels.grid_message_yes;
     }
 
+    window.getImage = function (photo, sex) {
+        if(!photo) {
+            var s = (sex && sex == 'female') ? '_f' : '';
+            return '<img class="img-thumbnail patient-photo-small" src="/images/no_photo' + s + '.jpg" />';    
+        }
+        return '<img class="img-thumbnail patient-photo-small" src="' + links.person_photo_link + photo + '" />';
+    }
+
     $("#mainGrid").kendoGrid({
         dataSource: {
             transport: {
@@ -93,17 +101,14 @@
             field: "id",
             title: labels.grid_column_id,
             width: 50,
-            locked: true
         }, {
             field: "first_name",
             title: labels.grid_column_fname,
             width: 115,
-            locked: true
         }, {
             field: "last_name",
             title: labels.grid_column_lname,
             width: 120,
-            locked: true
         }, {
             command: [{
                 name: "edit",
@@ -120,7 +125,7 @@
             field: "patient.photo",
             title: labels.grid_column_photo,
             width: 100,
-
+            template: '#=window.getImage(patient.photo, patient.sex)#'
         }, {
             field: "patient.mother_name",
             title: labels.grid_column_mother,

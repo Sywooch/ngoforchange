@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "person_data_patient".
@@ -29,6 +30,10 @@ use Yii;
  */
 class PersonDataPatient extends \yii\db\ActiveRecord
 {
+    public $photo_file;
+    public $disability_proof_file;
+    public $application_form_file;
+    
     /**
      * @inheritdoc
      */
@@ -46,10 +51,10 @@ class PersonDataPatient extends \yii\db\ActiveRecord
             [['person_id', 'mother_name', 'disability', 'registered_since'], 'required'],
             [['person_id', 'children', 'disability', 'private_correspondence', 'email_subscribe', 'disability_subsidy'], 'integer'],
             [['last_contact', 'create_time', 'update_time'], 'safe'],
-            [['mother_name', 'sex', 'marital_status', 'profession', 'graduation', 'occupation', 'doctor', 'health_insurance'], 'string', 'max' => 255],
+            [['photo', 'disability_proof', 'application_form', 'mother_name', 'sex', 'marital_status', 'profession', 'graduation', 'occupation', 'doctor', 'health_insurance'], 'string', 'max' => 255],
             [['comments'], 'string'],
-            [['registered_since', 'birthday'], 'date'],
-            [['photo', 'disability_proof', 'application_form'], 'file'],
+            [['registered_since', 'birthday'], 'string'],
+            [['photo_file', 'disability_proof_file', 'application_form_file'], 'file'],
         ];
     }
 
@@ -89,5 +94,28 @@ class PersonDataPatient extends \yii\db\ActiveRecord
     public function getPerson()
     {
         return $this->hasOne(Person::className(), ['id' => 'person_id']);
+    }
+
+    public function save($runValidation = true, $attributeNames = null)
+    {
+        $pstx = '_file';
+        $files = [ 'photo', 'application_form', 'disability_proof' ];
+        $path = '../uploads/';
+
+        foreach ($files as $idx => $name) {
+            $this[$name.$pstx] = UploadedFile::getInstance($this, $name.$pstx);
+            if($this[$name.$pstx]) {
+                $file = $this[$name.$pstx];
+                $fileName = 
+                    $this->person_id.'_'.date('Y_m_d_H_i_s').'.'.
+                    $file->extension;
+                $file->saveAs(
+                    $path.
+                    $name.'/'.
+                    $fileName);
+                $this[$name] = $fileName;
+            }
+        }
+        return parent::save($runValidation, $attributeNames);
     }
 }

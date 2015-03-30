@@ -47,7 +47,8 @@ var labels = {
 var links = {
 	"person_read": "?r=api/patients/index",
 	"person_update": "?r=persons/edit&form=formpatient&person_id=",
-	"person_preview": "?r=persons/view&person_id="
+	"person_preview": "?r=persons/view&person_id=",
+	"person_photo_link": "?r=persons/attachment&t=photo&f="
 };
 </script>
 

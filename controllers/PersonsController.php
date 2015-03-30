@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\Response;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\Person;
@@ -128,6 +129,7 @@ class PersonsController extends Controller
 
     public function actionEdit($person_id, $form)
     {
+        $isCreate = false;
         $type = PersonType::find()
             ->where(['form_name' => $form])
             ->one();
@@ -137,19 +139,27 @@ class PersonsController extends Controller
         }
 
         $person = Person::findOne($person_id);
-        if($type == null) {
-            throw new NotFoundHttpException('No person is not found.');
+        if($person == null) {
+            throw new NotFoundHttpException('No person is found.');
         }
 
         $classReflect = new \ReflectionClass('app\models\\'. $type->model_name);
         $model = $classReflect->getMethod('findOne')->invoke(null, $person_id);
 
         if($model == null) {
-            throw new NotFoundHttpException('Requested data is not found.');
+            $model = $classReflect->newInstanceArgs();
+            $model->person_id = $person_id;
+            $isCreate = true;
+        }
+
+        $post = Yii::$app->request->post();
+        if ($model->load($post) && $model->validate()) {
+            // saving
+            $model->save();
         }
         
         return $this->render($type->form_name, [
-                'isCreate' => false,
+                'isCreate' => $isCreate,
                 'person_id' => $person_id,
                 'person' => $person,
                 'model' => $model,
@@ -187,6 +197,30 @@ class PersonsController extends Controller
                 'person' => $person,
                 'person_data' => $person_data
             ]);
+    }
+
+    public function actionAttachment($t, $f)
+    {
+        $path = '../uploads/';
+        $ts = [ 'photo', 'application_form', 'disability_proof' ];
+        $file = $path.$t.'/'.$f;
+
+        if(!in_array($t, $ts))
+            throw new NotFoundHttpException('Object you are requested not found.');
+
+        if(!file_exists($file))
+            throw new NotFoundHttpException('Object you are requested not found.');
+
+        // MIME TYPE doesn't work
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $file);
+        finfo_close($finfo);
+
+        $response = Yii::$app->getResponse();
+        $response->format = Response::FORMAT_RAW;
+        $response->headers->add('Content-Type', $mime);
+        
+        echo readfile($file);
     }
 
     public function actionContacts()

@@ -35,7 +35,6 @@ var labels = {
 <div class="FormPatient">
 
     <?php $form = ActiveForm::begin(); ?>
-
         <h1><?= $this->title ?></h1>
 
         <input type="hidden" id="model_name" name="model_name" value="PersonDataPatient" required="required" />
@@ -56,7 +55,14 @@ var labels = {
                     'tabIndex' => '3',
                     'value' => $person_id
                 ]) ?>
-        <?= $form->field($model, 'photo')->fileInput() ?>
+        <?php if($model->photo && $model->photo != ''): ?>
+            <img class="img-thumbnail patient-photo" src="?r=persons/attachment&t=photo&f=<?= $model->photo ?>" />
+        <?php elseif ($model->sex && $model->sex != ''): ?>
+            <img class="img-thumbnail patient-photo" src="/images/no_photo<?= $model->sex == 'female' ? '_f' : '' ?>.jpg" />
+        <?php else: ?>
+            <img class="img-thumbnail patient-photo" src="/images/no_photo.jpg" />
+        <?php endif; ?>
+        <?= $form->field($model, 'photo_file')->fileInput() ?>
         <?= $form->field($model, 'mother_name') ?>
         <?= $form->field($model, 'sex')->dropDownList($list_sex) ?>
         <?= $form->field($model, 'birthday') ?>
@@ -67,8 +73,8 @@ var labels = {
         <?= $form->field($model, 'occupation') ?>
         <?= $form->field($model, 'disability') ?>
         <?= $form->field($model, 'disability_subsidy') ?>
-        <?= $form->field($model, 'disability_proof')->fileInput() ?>
-        <?= $form->field($model, 'application_form')->fileInput() ?>
+        <?= $form->field($model, 'disability_proof_file')->fileInput() ?>
+        <?= $form->field($model, 'application_form_file')->fileInput() ?>
         <?= $form->field($model, 'doctor') ?>
         <?= $form->field($model, 'health_insurance') ?>
         <?= $form->field($model, 'private_correspondence')->checkBox() ?>
