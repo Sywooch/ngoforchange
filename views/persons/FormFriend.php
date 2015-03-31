@@ -3,21 +3,33 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+use app\models\ListSex;
+use app\models\ListGraduation;
+use app\models\ListMaritalStatus;
+
+use app\components\Normalizer;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonDataFriend */
 /* @var $form ActiveForm */
 
-if($isCreate)
-    $this->title = Yii::t('app', 'Register a friend');
-else
-    $this->title = Yii::t('app', 'Edit the friend');
+$this->title = $isCreate ? Yii::t('app', 'Register a friend') : Yii::t('app', 'Edit the friend');
+$this->registerJsFile(
+    'js/persons/formfriend.js',
+    [
+        'position' => yii\web\View::POS_END,
+        'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']
+    ]);
 
+$list_sex = Normalizer::executeKeyName(ListSex::find()->asArray()->all());
+$list_graduation = Normalizer::executeKeyName(ListGraduation::find()->asArray()->all());
+$list_marital_status = Normalizer::executeKeyName(ListMaritalStatus::find()->asArray()->all());
 ?>
 <div class="FormFriend">
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <h1><?= Yii::t('app', 'Register a friend') ?></h1>
+        <h1><?= $this->title ?></h1>
 
         <input type="hidden" id="model_name" name="model_name" value="PersonDataFriend" required="required" />
         <input type="hidden" id="person_id" name="person_id" value="<?= $person_id ?>" />
@@ -37,8 +49,9 @@ else
                     'tabIndex' => '3',
                     'value' => $person_id
                 ]) ?>
+        <?= $form->field($model, 'tax_registration_number') ?>
         <?= $form->field($model, 'registered_since') ?>
-        <?= $form->field($model, 'comments') ?>
+        <?= $form->field($model, 'comments')->textarea() ?>
     
         <div class="form-group text-right">
             <a href="?r=persons/all" class="btn btn-danger"><?= Yii::t('app', 'Cancel') ?></a>

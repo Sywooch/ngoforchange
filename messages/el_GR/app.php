@@ -65,6 +65,12 @@
 		'Last Contact' => 'Τελαυταία επικοινωνία',
 		'Comments' => 'Παρατηρήσεις',
 		'Sex' => 'Φύλο',
+		'Email Subscription' => '',
+		'Health Insurance' => '',
+		'Resume' => '',
+		'Tax Registation Number' => '',
+		'Institution Name' => '',
+		'Capacity' => '',
 
 		// medicines part - φάρμακα
 		'Medicines' => 'Φαμακευτικά Σκευάσματα',
@@ -87,7 +93,7 @@
 	    'About to Expire' => '',
 	    'expiration' => '',
 	    'Please pay attention to following medicines' => '',
-		
+
 		// members part - μέλη 
 		'Members' => 'Μέλη',
 		'All Members' => 'Όλα τα μέλη',

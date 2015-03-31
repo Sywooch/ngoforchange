@@ -4,9 +4,9 @@ namespace app\module\api\controllers;
 
 use app\components\ApiController;
 use app\models\Person;
-use app\models\PersonDataPatient;
+use app\models\PersonDataOfficial;
 
-class PatientsController extends ApiController
+class OfficialsController extends ApiController
 {
      public function actionIndex()
     {
@@ -20,25 +20,25 @@ class PatientsController extends ApiController
     	if($id == '') {
     		$persons = Person::find()
     			->joinWith(['types'])
-    			->where(['person_type.model_name' => 'PersonDataPatient'])
-    			->joinWith(['patient'])
+    			->where(['person_type.model_name' => 'PersonDataOfficial'])
+    			->joinWith(['official'])
     			->asArray()
     			->all();
     	}
     	else {
     		$persons = Person::find()
     			->joinWith(['types'])
-    			->where(['person_type.model_name' => 'PersonDataPatient'])
+    			->where(['person_type.model_name' => 'PersonDataOfficial'])
     			->andWhere(['person.id' => $id])
-    			->joinWith(['patient'])
+    			->joinWith(['official'])
     			->asArray()
     			->all();
     	}
 
         foreach ($persons as $key => $person) {
-            if($person['patient'] == null) {
-                $persons[$key]['patient'] = (new PersonDataPatient())->attributes;
-                $persons[$key]['patient']['person_id'] = $person['id'];
+            if($person['official'] == null) {
+                $persons[$key]['official'] = (new PersonDataOfficial())->attributes;
+                $persons[$key]['official']['person_id'] = $person['id'];
             }
         }
 

@@ -40,12 +40,11 @@ class PersonDataVolunteer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'ssrn', 'city', 'birthday', 'may_provide', 'registered_since'], 'required'],
+            [['person_id', 'birthday', 'may_provide', 'registered_since'], 'required'],
             [['person_id'], 'integer'],
-            [['address', 'resume', 'may_provide'], 'string'],
+            [['may_provide'], 'string'],
             [['birthday', 'registered_since', 'create_time', 'update_time'], 'safe'],
-            [['ssrn', 'post_code', 'city', 'marital_status', 'graduation', 'occupation'], 'string', 'max' => 255],
-            [['ssrn'], 'unique']
+            [['marital_status', 'graduation', 'graduation', 'occupation', 'resume'], 'string', 'max' => 255],
         ];
     }
 
@@ -56,12 +55,9 @@ class PersonDataVolunteer extends \yii\db\ActiveRecord
     {
         return [
             'person_id' => Yii::t('app', 'Person ID'),
-            'ssrn' => Yii::t('app', 'Ssrn'),
-            'address' => Yii::t('app', 'Address'),
-            'post_code' => Yii::t('app', 'Post Code'),
-            'city' => Yii::t('app', 'City'),
             'birthday' => Yii::t('app', 'Birthday'),
             'marital_status' => Yii::t('app', 'Marital Status'),
+            'graduation' => Yii::t('app', 'Profession'),
             'graduation' => Yii::t('app', 'Graduation'),
             'occupation' => Yii::t('app', 'Occupation'),
             'resume' => Yii::t('app', 'Resume'),

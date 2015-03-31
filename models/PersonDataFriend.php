@@ -37,7 +37,8 @@ class PersonDataFriend extends \yii\db\ActiveRecord
         return [
             [['person_id', 'registered_since'], 'required'],
             [['person_id'], 'integer'],
-            [[ 'comments'], 'string'],
+            [['comments'], 'string'],
+            [['tax_registration_number'], 'string', 'max' => 255],
             [['registered_since', 'create_time', 'update_time'], 'safe'],
         ];
     }
@@ -49,6 +50,7 @@ class PersonDataFriend extends \yii\db\ActiveRecord
     {
         return [
             'person_id' => Yii::t('app', 'Person ID'),
+            'tax_registration_number' => Yii::t('app', 'Tax Registation Number'),
             'registered_since' => Yii::t('app', 'Registered Since'),
             'comments' => Yii::t('app', 'Comments'),
             'create_time' => Yii::t('app', 'Create Time'),

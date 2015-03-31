@@ -34,11 +34,10 @@ class PersonDataOfficial extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['person_id', 'institution', 'capacity', 'city'], 'required'],
+            [['person_id', 'institution', 'capacity'], 'required'],
             [['person_id'], 'integer'],
-            [['address'], 'string'],
             [['create_time', 'update_time'], 'safe'],
-            [['institution', 'capacity', 'post_code', 'city'], 'string', 'max' => 255]
+            [['institution', 'capacity'], 'string', 'max' => 255]
         ];
     }
 
@@ -51,9 +50,6 @@ class PersonDataOfficial extends \yii\db\ActiveRecord
             'person_id' => Yii::t('app', 'Person ID'),
             'institution' => Yii::t('app', 'Institution'),
             'capacity' => Yii::t('app', 'Capacity'),
-            'address' => Yii::t('app', 'Address'),
-            'post_code' => Yii::t('app', 'Post Code'),
-            'city' => Yii::t('app', 'City'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];

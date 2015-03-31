@@ -2,32 +2,22 @@
 
     window.showPreview = function (e) {
         e.preventDefault();
-
         var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
         location.href = links.person_preview + dataItem.id;
+    }
+
+    window.editPerson = function (e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        location.href = links.person_update + dataItem.id;
     }
 
     $("#mainGrid").kendoGrid({
         dataSource: {
             transport: {
-                create: {
-                    url: links.person_create,
-                    type: "POST",
-                    dataType: "json"
-                },
                 read: {
                     url: links.person_read,
                     type: "GET",
-                    dataType: "json"
-                },
-                update: {
-                    url: links.person_update,
-                    type: "POST",
-                    dataType: "json"
-                },
-                destroy: {
-                    url: links.person_destroy,
-                    type: "POST",
                     dataType: "json"
                 },
                 parameterMap: function(options, operation) {
@@ -57,12 +47,7 @@
             batch: true,
             pageSize: 20
         },
-        editable: {
-            mode: "popup",
-            createAt: "bottom",
-            confirmation: labels.grid_confirm_delete,
-            confirmDelete: "Yes"
-        },
+        editable: false,
         groupable: true,
         sortable: true,
         resizable: true,
@@ -76,17 +61,6 @@
             extra: false,
         },
         columns: [{
-            command: [{
-                name: "edit",
-                text: labels.grid_button_edit
-            }, {
-                name: "custom",
-                text: labels.grid_button_preview,
-                click: window.showPreview
-            }],
-            title: "&nbsp;",
-            width: 180
-        }, {
             field: "id",
             title: labels.grid_column_id,
             width: 50
@@ -99,24 +73,28 @@
             title: labels.grid_column_lname,
             width: 150
         }, {
-            field: "ssrn",
-            title: labels.grid_column_ssrn,
+            command: [{
+                name: "edit",
+                text: labels.grid_button_edit,
+                click: window.editPerson
+            }, {
+                name: "custom",
+                text: labels.grid_button_preview,
+                click: window.showPreview
+            }],
+            title: "&nbsp;",
+            width: 220
+        }, {
+            field: "friend.tax_registration_number",
+            title: labels.grid_column_trn,
             width: 150
         }, {
-            field: "id_number",
-            title: labels.grid_column_idnumber,
+            field: "friend.registered_since",
+            title: labels.grid_column_regsince,
             width: 150
         }, {
-            field: "father_name",
-            title: labels.grid_column_fathername,
-            width: 150
-        }, {
-            field: "address",
-            title: labels.grid_column_address,
-            width: 150
-        }, {
-            field: "post_code",
-            title: labels.grid_column_post,
+            field: "friend.comments",
+            title: labels.grid_column_comments,
             width: 150
         }]
     });

@@ -3,15 +3,33 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+use app\models\ListSex;
+use app\models\ListGraduation;
+use app\models\ListMaritalStatus;
+
+use app\components\Normalizer;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonDataOfficial */
 /* @var $form ActiveForm */
+
+$this->title = $isCreate ? Yii::t('app', 'Register an official') : Yii::t('app', 'Edit the official');
+$this->registerJsFile(
+    'js/persons/formofficial.js',
+    [
+        'position' => yii\web\View::POS_END,
+        'depends' => ['yii\web\YiiAsset', 'app\assets\KendoAsset']
+    ]);
+
+$list_sex = Normalizer::executeKeyName(ListSex::find()->asArray()->all());
+$list_graduation = Normalizer::executeKeyName(ListGraduation::find()->asArray()->all());
+$list_marital_status = Normalizer::executeKeyName(ListMaritalStatus::find()->asArray()->all());
 ?>
 <div class="FormOfficial">
 
     <?php $form = ActiveForm::begin(); ?>
 
-        <h1>Register a Official</h1>
+        <h1><?= $this->title ?></h1>
 
         <input type="hidden" id="model_name" name="model_name" value="PersonDataOfficial" required="required" />
         <input type="hidden" id="person_id" name="person_id" value="<?= $person_id ?>" />
@@ -33,8 +51,6 @@ use yii\widgets\ActiveForm;
                 ]) ?>
         <?= $form->field($model, 'institution') ?>
         <?= $form->field($model, 'capacity') ?>
-        <?= $form->field($model, 'create_time') ?>
-        <?= $form->field($model, 'update_time') ?>
     
         <div class="form-group text-right">
             <a href="?r=persons/all" class="btn btn-danger">Cancel</a>

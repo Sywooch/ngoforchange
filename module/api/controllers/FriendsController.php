@@ -4,9 +4,9 @@ namespace app\module\api\controllers;
 
 use app\components\ApiController;
 use app\models\Person;
-use app\models\PersonDataPatient;
+use app\models\PersonDataFriend;
 
-class PatientsController extends ApiController
+class FriendsController extends ApiController
 {
      public function actionIndex()
     {
@@ -20,25 +20,25 @@ class PatientsController extends ApiController
     	if($id == '') {
     		$persons = Person::find()
     			->joinWith(['types'])
-    			->where(['person_type.model_name' => 'PersonDataPatient'])
-    			->joinWith(['patient'])
+    			->where(['person_type.model_name' => 'PersonDataFriend'])
+    			->joinWith(['friend'])
     			->asArray()
     			->all();
     	}
     	else {
     		$persons = Person::find()
     			->joinWith(['types'])
-    			->where(['person_type.model_name' => 'PersonDataPatient'])
+    			->where(['person_type.model_name' => 'PersonDataFriend'])
     			->andWhere(['person.id' => $id])
-    			->joinWith(['patient'])
+    			->joinWith(['friend'])
     			->asArray()
     			->all();
     	}
 
         foreach ($persons as $key => $person) {
-            if($person['patient'] == null) {
-                $persons[$key]['patient'] = (new PersonDataPatient())->attributes;
-                $persons[$key]['patient']['person_id'] = $person['id'];
+            if($person['friend'] == null) {
+                $persons[$key]['friend'] = (new PersonDataFriend())->attributes;
+                $persons[$key]['friend']['person_id'] = $person['id'];
             }
         }
 

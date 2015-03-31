@@ -1,5 +1,5 @@
 <?php
-	$this->title = 'Friends';
+	$this->title = Yii::t('app', 'Friends');
 	$this->registerJsFile(
 		'js/persons/friends.js',
 		[
@@ -16,26 +16,19 @@ var labels = {
 	"grid_column_id": "<?php echo Yii::t('app', 'ID'); ?>",
 	"grid_column_fname": "<?php echo Yii::t('app', 'First Name'); ?>",
 	"grid_column_lname": "<?php echo Yii::t('app', 'Last Name'); ?>",
-	"grid_column_types": "<?php echo Yii::t('app', 'Registered as'); ?>",
-	"grid_column_ssrn": "<?php echo Yii::t('app', 'SSRN'); ?>",
-	"grid_column_idnumber": "<?php echo Yii::t('app', 'ID Number'); ?>",
-	"grid_column_fathername": "<?php echo Yii::t('app', 'Father Name'); ?>",
-	"grid_column_address": "<?php echo Yii::t('app', 'Address'); ?>",
-	"grid_column_post": "<?php echo Yii::t('app', 'Post Code'); ?>",
-	"grid_column_city": "<?php echo Yii::t('app', 'City'); ?>",
-	
-	"grid_confirm_delete": "<?php echo Yii::t('app', 'Are you sure that you want to delete this record?'); ?>"
+	"grid_column_trn": "<?php echo Yii::t('app', 'Tax Registation Number'); ?>",
+	"grid_column_regsince": "<?php echo Yii::t('app', 'Registered Since'); ?>",
+	"grid_column_comments": "<?php echo Yii::t('app', 'Comments'); ?>",
 };
 
 var links = {
-	"person_read": "?r=api/persons/index",
-	"person_update": "?r=api/persons/update",
-	"person_destroy": "?r=api/persons/destroy",
+	"person_read": "?r=api/friends/index",
+	"person_update": "?r=persons/edit&form=formfriend&person_id=",
 	"person_preview": "?r=persons/view&person_id="
 };
 </script>
 
-<h3>Friends</h3>
+<h3><?= Yii::t('app', 'Friends') ?></h3>
 <p>
 	<a id="" href="?r=persons/create" class="btn btn-success">
 		<?php echo Yii::t('app', 'Register a person'); ?>
