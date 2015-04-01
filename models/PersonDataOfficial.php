@@ -50,8 +50,6 @@ class PersonDataOfficial extends \yii\db\ActiveRecord
             'person_id' => Yii::t('app', 'Person ID'),
             'institution' => Yii::t('app', 'Institution'),
             'capacity' => Yii::t('app', 'Capacity'),
-            'create_time' => Yii::t('app', 'Create Time'),
-            'update_time' => Yii::t('app', 'Update Time'),
         ];
     }
 

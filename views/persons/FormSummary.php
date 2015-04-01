@@ -6,6 +6,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonSummary */
 /* @var $form ActiveForm */
+
+$this->title = Yii::t('app', 'Thank you');
 ?>
 <div class="FormSummary">
 

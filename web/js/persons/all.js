@@ -2,18 +2,21 @@
 
     window.showPreview = function (e) {
         e.preventDefault();
-
         var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
         location.href = links.person_preview + dataItem.id;
     }
 
+    window.editPerson = function (e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        location.href = links.person_update + dataItem.id;
+    }
+
     window.typesToString = function (types) {
         var string = '';
-
         for(var i = 0; i < types.length; i++) {
             if(i != 0)
                 string += ', ';
-
             string += types[i].name;
         }
         return string;
@@ -87,10 +90,14 @@
         filterable: {
             extra: false,
         },
+        edit: function (e) {
+            e.preventDefault();
+        },
         columns: [{
             command: [{
                 name: "edit",
-                text: labels.grid_button_edit
+                text: labels.grid_button_edit,
+                click: window.editPerson
             }, {
                 name: "destroy",
                 text: labels.grid_button_destroy

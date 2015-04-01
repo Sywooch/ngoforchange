@@ -53,8 +53,6 @@ class PersonDataFriend extends \yii\db\ActiveRecord
             'tax_registration_number' => Yii::t('app', 'Tax Registation Number'),
             'registered_since' => Yii::t('app', 'Registered Since'),
             'comments' => Yii::t('app', 'Comments'),
-            'create_time' => Yii::t('app', 'Create Time'),
-            'update_time' => Yii::t('app', 'Update Time'),
         ];
     }
 

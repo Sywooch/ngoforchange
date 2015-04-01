@@ -59,8 +59,9 @@ class Person extends ActiveRecord
         return [
             [['last_name', 'first_name'], 'required', 'message' => Yii::t('app', 'This field can\'t be blank.')],
             [['is_deleted'], 'integer'],
+            [['address'], 'string'],
             [['creation_time'], 'safe'],
-            [['last_name', 'father_name', 'first_name', 'deletion_reason'], 'string', 'max' => 255],
+            [['last_name', 'father_name', 'first_name', 'ssrn', 'id_number', 'post_code', 'city', 'deletion_reason'], 'string', 'max' => 255],
             [['selectedTypes'], 'validateSelectedTypes'],
         ];
     }

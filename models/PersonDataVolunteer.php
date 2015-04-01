@@ -63,8 +63,6 @@ class PersonDataVolunteer extends \yii\db\ActiveRecord
             'resume' => Yii::t('app', 'Resume'),
             'may_provide' => Yii::t('app', 'May Provide'),
             'registered_since' => Yii::t('app', 'Registered Since'),
-            'create_time' => Yii::t('app', 'Create Time'),
-            'update_time' => Yii::t('app', 'Update Time'),
         ];
     }
 
