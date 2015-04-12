@@ -35,7 +35,38 @@ var links = {
 };
 </script>
 
-<h3><?= $person->id.' # '.$person->first_name.' '.$person->last_name ?> - <?= Yii::t('app', 'Profile') ?></h3>
+<?php
+	$photo_file = '';
+
+	if(isset($patient_data_index) && $patient_data_index != -1) {
+		$i = $patient_data_index;
+
+		if(isset($person_data[$i]['model']->photo) && $person_data[$i]['model']->photo != '')
+			$photo_file = '?r=persons/attachment&t=photo&f='. $person_data[$i]['model']->photo;
+		else if(isset($person_data[$i]['model']->sex))
+			$photo_file = '/images/no_photo'. ($person_data[$i]['model']->sex == 'female' ? '_f' : '') .'.jpg';
+		else
+			$photo_file = '/images/no_photo.jpg';
+
+	} else {
+		$photo_file = '/images/no_photo.jpg';
+	}
+?>
+
+<!-- title and photo attachement -->
+<div class="row">
+	<div class="col-xs-4 col-md-2">
+		<img class="img-thumbnail patient-photo" src="<?= $photo_file ?>" />
+	</div>
+	<div class="col-xs-8 col-md-10">
+		<h3><?= Yii::t('app', 'Profile') ?></h3>
+		<h3>
+			# <?= $person->id ?><br />
+			<?= $person->first_name.' '.$person->last_name ?>
+		</h3>
+	</div>
+</div>
+
 <?php if (isset($person->is_deleted) && $person->is_deleted == '1'): ?>
 	<div class="alert alert-danger" role="alert">
 		<div>
@@ -143,12 +174,12 @@ var links = {
 					$icons = Yii::$app->params['contactTypeIcons'];
 					foreach ($person['contacts'] as $key => $contact) {
 						$icon = '';
-						if(isset($icons[$contact->type])) {
-							$icon = '<img src="'.$icons[$contact->type].'" alt="'.$contact->type.'" title="'.$contact->type.'" />';
+						if(isset($icons[$contact->contact_type])) {
+							$icon = '<img src="'.$icons[$contact->contact_type].'" alt="'.$contact->contact_type.'" title="'.$contact->contact_type.'" />';
 						}
 
-						echo '<tr><td class="contact-icon">'.$icon.'</td><td>'.$contact->type.'</td>';
-						echo '<td>'.$contact->data.'</td></tr>';
+						echo '<tr><td class="contact-icon">'.$icon.'</td><td>'.$contact->contact_type.'</td>';
+						echo '<td>'.$contact->contact_data.'</td></tr>';
 					}	
 				}
 			?>

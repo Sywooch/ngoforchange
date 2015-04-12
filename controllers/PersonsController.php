@@ -189,6 +189,7 @@ class PersonsController extends Controller
         }
 
         $person_data = [];
+        $patient_data_index = -1;
 
         if(isset($person->types)) {
             foreach ($person->types as $key => $type) {
@@ -200,12 +201,16 @@ class PersonsController extends Controller
                         'name' => $type->name,
                         'model' => $find->where(['person_id' => $person_id])->one()
                     ]);
+
+                if($type->model_name == 'PersonDataPatient')
+                    $patient_data_index = count($person_data) - 1;
             }
         }
 
         return $this->render('view', [
                 'person' => $person,
-                'person_data' => $person_data
+                'person_data' => $person_data,
+                'patient_data_index' => $patient_data_index
             ]);
     }
 
