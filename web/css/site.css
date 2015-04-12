@@ -114,3 +114,8 @@ a.desc:after {
     max-width: 64px;
     max-height: 64px;
 }
+
+.contact_type_icon {
+    max-height: 16px;
+    max-width: 16px;
+}

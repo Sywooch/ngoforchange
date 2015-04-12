@@ -2,7 +2,7 @@
 
     window.getTypeIcon = function(type) {
         var icon =  contactTypeIcons[type] || '';
-        return '<img src="' + icon + '" alt="' + type + '" title="' + type + '" />';
+        return '<img src="' + icon + '" alt="' + type + '" title="' + type + '" class="contact_type_icon" />';
     }
 
     window.getPerson = function(person) {
@@ -58,7 +58,6 @@
             error: function(e) {
                 console.log(e.errors); // displays "Invalid query"
             },
-            batch: true,
             pageSize: 20
         },
         editable: {
@@ -92,18 +91,22 @@
                 text: labels.grid_button_destroy
             }],
             title: "&nbsp;",
-            width: 200
+            width: 120
         }, {
-            field: "type",
-            title: labels.grid_column_type,
-            width: 150,
+            field: "id",
+            title: labels.grid_column_id,
+            width: 50,
         }, {
             title: "&nbsp;",
             filterable: false,
             width: 32,
-            template: '#=window.getTypeIcon(type)#'
+            template: '#=window.getTypeIcon(contact_type)#'
         }, {
-            field: "data",
+            field: "contact_type",
+            title: labels.grid_column_data,
+            width: 150,
+        }, {
+            field: "contact_data",
             title: labels.grid_column_data,
             width: 150
         }, {

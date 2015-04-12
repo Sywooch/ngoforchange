@@ -4,6 +4,7 @@ namespace app\module\api\controllers;
 
 use app\components\ApiController;
 use app\models\Contacts;
+use app\models\Person;
 
 class ContactsController extends ApiController
 {
@@ -21,8 +22,7 @@ class ContactsController extends ApiController
     			->with(['person'])
     			->asArray()
     			->all();
-    	}
-    	else {
+    	} else {
     		$persons = Contacts::find()
     			->where(['id' => $id])
     			->with(['person'])
@@ -34,15 +34,6 @@ class ContactsController extends ApiController
         	self::RSP_STATUS_CODE => 200,
         	self::RSP_HAS_ERROR => false,
         	self::RSP_DATA => $persons
-    	];
-    }
-
-    public function actionA()
-    {
-    	return [
-        	self::RSP_STATUS_CODE => 200,
-        	self::RSP_HAS_ERROR => false,
-        	self::RSP_DATA => ''
     	];
     }
 }

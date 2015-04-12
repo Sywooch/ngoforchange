@@ -340,13 +340,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Projects_Git_ShaderZAK/ngoforchange",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/views/persons",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons"
+		"/E/Projects/shaderzak-git/eenosims"
 	],
 	"file_history":
 	[
@@ -613,8 +607,8 @@
 						"selection":
 						[
 							[
-								2875,
-								2875
+								3147,
+								3147
 							]
 						],
 						"settings":

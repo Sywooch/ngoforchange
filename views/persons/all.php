@@ -29,7 +29,7 @@ var labels = {
 
 var links = {
 	"person_read": "?r=api/persons/index",
-	"person_update": "?r=api/persons/update",
+	"person_update": "?r=persons/edit&form=formperson&person_id=",
 	"person_destroy": "?r=api/persons/destroy",
 	"person_preview": "?r=persons/view&person_id="
 };

@@ -133,6 +133,15 @@ class PersonsController extends Controller
         $type = PersonType::find()
             ->where(['form_name' => $form])
             ->one();
+        $types = PersonType::find()->asArray()->all();
+
+
+        if($type == null && strtolower($form) == 'formperson') {
+            // Person form is excepion
+            $type = new PersonType();
+            $type->form_name = 'FormPerson';
+            $type->model_name = 'Person';
+        }
 
         if($type == null) {
             throw new NotFoundHttpException('Form is not found.');
@@ -164,6 +173,7 @@ class PersonsController extends Controller
                 'person' => $person,
                 'model' => $model,
                 'step' => null,
+                'types' => $this->normalizeTypes($types)
             ]);
     }
 

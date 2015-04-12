@@ -90,13 +90,12 @@
         filterable: {
             extra: false,
         },
-        edit: function (e) {
-            e.preventDefault();
-        },
         columns: [{
             command: [{
-                name: "edit",
+                name: "custom_edit",
                 text: labels.grid_button_edit,
+                //template: '<a class="k-button k-grid-edit" onclick="editPerson(this)" style="min-width: 16px;"><span class="k-icon k-edit"></span> ' +  + '</a>',
+                imageClass: 'k-icon k-i-pencil',
                 click: window.editPerson
             }, {
                 name: "destroy",

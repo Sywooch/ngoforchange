@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "contacts".
@@ -14,8 +15,13 @@ use Yii;
  *
  * @property PersonContact[] $personContacts
  */
-class Contacts extends \yii\db\ActiveRecord
+class Contacts extends ActiveRecord
 {
+    public static function model($className = __CLASS__)
+    {
+        return parent::model($className);
+    }
+
     /**
      * @inheritdoc
      */
@@ -30,9 +36,9 @@ class Contacts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type', 'data'], 'required'],
+            [['contact_type', 'contact_data'], 'required'],
             [['create_time'], 'safe'],
-            [['type', 'data'], 'string', 'max' => 255]
+            [['contact_type', 'contact_data'], 'string', 'max' => 255]
         ];
     }
 
@@ -43,8 +49,8 @@ class Contacts extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'type' => Yii::t('app', 'Type'),
-            'data' => Yii::t('app', 'Data'),
+            'contact_type' => Yii::t('app', 'Type'),
+            'contact_data' => Yii::t('app', 'Data'),
             'create_time' => Yii::t('app', 'Create Time'),
         ];
     }
