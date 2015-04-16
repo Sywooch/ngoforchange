@@ -119,3 +119,34 @@ a.desc:after {
     max-height: 16px;
     max-width: 16px;
 }
+
+.bg-image-1, .bg-image-2, .bg-image-3, .bg-image-4, .bg-image-5 {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.bg-image-1 {
+    background-image: url(../images/bg/img1.jpg);
+}
+
+.bg-image-2 {
+    background-image: url(../images/bg/img2.jpg);
+}
+
+.bg-image-3 {
+    background-image: url(../images/bg/img3.jpg);
+}
+
+.bg-image-4 {
+    background-image: url(../images/bg/img4.jpg);
+}
+
+.bg-image-5 {
+    background-image: url(../images/bg/img5.jpg);
+}
+
+body div.container.main-container {
+    background-color: rgb(255, 255, 255);
+}

@@ -23,7 +23,7 @@ AppAsset::register($this);
 <body>
 
 <?php $this->beginBody() ?>
-    <div class="wrap">
+    <div class="wrap bg-image-<?= mt_rand(1, 5); ?>">
         <?php
             NavBar::begin([
                 'brandLabel' => Yii::t('app', 'EENOSIMS'),
@@ -74,7 +74,7 @@ AppAsset::register($this);
             NavBar::end();
         ?>
 
-        <div class="container">
+        <div class="container main-container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>

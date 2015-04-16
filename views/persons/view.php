@@ -91,7 +91,7 @@ var links = {
 					<?= Yii::t('app', 'General Information') ?>
 				</th>
 				<th class="text-right">
-					<a href='' class="btn btn-sm btn-info">
+					<a href="?r=persons/edit&form=formperson&person_id=<?= $person->id ?>" class="btn btn-sm btn-info">
 						<span class="glyphicon glyphicon-pencil"></span>
 						<?= Yii::t('app', 'Edit') ?>
 					</a>
@@ -123,7 +123,7 @@ var links = {
 					<?= $data['name'] ?> <?= Yii::t('app', 'information') ?> 
 				</th>
 				<th class="text-right">
-					<a href='' class="btn btn-sm btn-info">
+					<a href="?r=persons/edit&form=<?= $data['form_name'] ?>&person_id=<?= $person->id ?>" class="btn btn-sm btn-info">
 						<span class="glyphicon glyphicon-pencil"></span>
 						<?= Yii::t('app', 'Edit') ?>
 					</a>
@@ -159,7 +159,7 @@ var links = {
 					<?= Yii::t('app', 'Contact information') ?> 
 				</th>
 				<th class="text-right">
-					<a href='' class="btn btn-sm btn-info">
+					<a href="?r=persons/edit&form=formcontacts&person_id=<?= $person->id ?>" class="btn btn-sm btn-info">
 						<span class="glyphicon glyphicon-pencil"></span>
 						<?= Yii::t('app', 'Edit') ?>
 					</a>
@@ -198,10 +198,11 @@ var links = {
 					<?= Yii::t('app', 'Donation information') ?> 
 				</th>
 				<th class="text-right">
-					<a href='' class="btn btn-sm btn-info">
+					&nbsp;
+					<!--<a href='' class="btn btn-sm btn-info">
 						<span class="glyphicon glyphicon-pencil"></span>
 						<?= Yii::t('app', 'Edit') ?>
-					</a>
+					</a>-->
 				</th>
 			</tr>
 		</thead>

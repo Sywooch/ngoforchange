@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
-				"Pers",
-				"PersonDataOfficial"
+				"back",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"pho",
+				"photo"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"per",
+				"person_data"
+			],
+			[
+				"photo",
+				"photo_file"
+			],
+			[
+				"pa",
+				"patient_data_index"
 			],
 			[
 				"pers",
-				"persons"
+				"person_data"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"Pers",
+				"PersonType"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"edit",
+				"editPerson"
 			],
 			[
 				"max-",
@@ -38,10 +78,6 @@
 			[
 				"th",
 				"this"
-			],
-			[
-				"pho",
-				"photo_file"
 			],
 			[
 				"app",
@@ -94,10 +130,6 @@
 			[
 				"min-",
 				"min-height"
-			],
-			[
-				"per",
-				"person_id"
 			],
 			[
 				"perso",
@@ -276,27 +308,35 @@
 	"buffers":
 	[
 		{
-			"file": "views/persons/FormPerson.php",
+			"file": "views/layouts/main.php",
 			"settings":
 			{
-				"buffer_size": 2583,
+				"buffer_size": 3328,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/persons/all.php",
+			"file": "views/persons/FormPerson.php",
 			"settings":
 			{
-				"buffer_size": 1634,
+				"buffer_size": 2748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/PersonsController.php",
+			"settings":
+			{
+				"buffer_size": 9334,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "web/js/persons/all.js",
+			"file": "web/css/site.css",
 			"settings":
 			{
-				"buffer_size": 4482,
-				"line_ending": "Windows"
+				"buffer_size": 2376,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -340,10 +380,33 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Projects/shaderzak-git/eenosims"
+		"/E/Projects/shaderzak-git/eenosims",
+		"/E/Projects/shaderzak-git/eenosims/controllers",
+		"/E/Projects/shaderzak-git/eenosims/models",
+		"/E/Projects/shaderzak-git/eenosims/views",
+		"/E/Projects/shaderzak-git/eenosims/views/layouts",
+		"/E/Projects/shaderzak-git/eenosims/views/persons",
+		"/E/Projects/shaderzak-git/eenosims/web",
+		"/E/Projects/shaderzak-git/eenosims/web/css",
+		"/E/Projects/shaderzak-git/eenosims/web/js",
+		"/E/Projects/shaderzak-git/eenosims/web/js/persons"
 	],
 	"file_history":
 	[
+		"/E/Projects/shaderzak-git/eenosims/web/index.php",
+		"/E/Projects/shaderzak-git/eenosims/controllers/PersonsController.php",
+		"/E/Projects/shaderzak-git/eenosims/views/persons/FormPatient.php",
+		"/E/Projects/shaderzak-git/eenosims/views/persons/view.php",
+		"/E/Projects/shaderzak-git/eenosims/module/api/controllers/PatientsController.php",
+		"/E/Projects/shaderzak-git/eenosims/views/persons/contacts.php",
+		"/E/Projects/shaderzak-git/eenosims/web/js/persons/contacts.js",
+		"/E/Projects/shaderzak-git/eenosims/web/css/site.css",
+		"/E/Projects/shaderzak-git/eenosims/module/api/controllers/ContactsController.php",
+		"/E/Projects/shaderzak-git/eenosims/models/Contacts.php",
+		"/E/Projects/shaderzak-git/eenosims/models/Person.php",
+		"/E/Projects/shaderzak-git/eenosims/views/persons/FormPerson.php",
+		"/E/Projects/shaderzak-git/eenosims/views/persons/all.php",
+		"/E/Projects/shaderzak-git/eenosims/web/js/persons/all.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/web/js/persons/friends.js",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Person.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PersonDataFriend.php",
@@ -457,21 +520,7 @@
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/controllers/DefaultController.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/module/api/views/default/index.php",
 		"/C/Projects_Git_ShaderZAK/ngoforchange/config/modules.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/GoodReceipt.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/EventPerson.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Event.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/PayReceipt.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Elections.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/CashReceipt.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/ElectionsVotes.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/models/Medicines.php",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/README.md",
-		"/C/Projects_Git_ShaderZAK/ngoforchange/README (2).md",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/vendor/bower/kendo-ui/wrappers/php/grid/editing.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/views/medicines/store.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/web/js/medicines/store.js",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/messages/gr_GR/app.php",
-		"/C/Projects_Svn_Assembla/trunk/ngoforchange/controllers/MedicinesController.php"
+		"/C/Projects_Git_ShaderZAK/ngoforchange/models/GoodReceipt.php"
 	],
 	"find":
 	{
@@ -489,6 +538,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"editPerson",
 			"details",
 			"person_id",
 			"selectedTypes",
@@ -533,33 +583,34 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/persons/FormPerson.php",
+					"file": "views/layouts/main.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2583,
+						"buffer_size": 3328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								560,
+								560
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -567,19 +618,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "views/persons/all.php",
+					"file": "views/persons/FormPerson.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1634,
+						"buffer_size": 2748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								407,
-								407
+								601,
+								601
 							]
 						],
 						"settings":
@@ -587,41 +638,71 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.x": -0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "web/js/persons/all.js",
+					"file": "controllers/PersonsController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4482,
+						"buffer_size": 9334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3147,
-								3147
+								5073,
+								5081
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "web/css/site.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2372,
+								2372
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1035.0,
+						"translation.y": 1440.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

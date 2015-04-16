@@ -143,6 +143,13 @@ class PersonsController extends Controller
             $type->model_name = 'Person';
         }
 
+        if($type == null && strtolower($form) == 'formcontacts') {
+            // Person form is excepion
+            $type = new PersonType();
+            $type->form_name = 'FormContacts';
+            $type->model_name = 'PersonContact';
+        }
+
         if($type == null) {
             throw new NotFoundHttpException('Form is not found.');
         }
@@ -199,6 +206,7 @@ class PersonsController extends Controller
                 array_push($person_data, [
                         'id' => $type->id,
                         'name' => $type->name,
+                        'form_name' => $type->form_name,
                         'model' => $find->where(['person_id' => $person_id])->one()
                     ]);
 
