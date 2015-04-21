@@ -29,14 +29,23 @@ $this->registerJsFile(
     	<input type="hidden" id="id" name="id" value="<?= $person_id ?>" />
     	<input type="hidden" id="step" name="step" value="<?= $step ?>" />
 
-		<?=
-			(!$isCreate) ? 
-				$form->field($model, 'id')
+    	<?php
+			if($isCreate) {
+				echo $form->field($model, 'id')
 					->textInput([
 						'id' => 'id',
 						'tabIndex' => '1', 
-				]) : ''
+					]);
+			} else {
+				echo $form->field($model, 'id')
+					->textInput([
+						'id' => 'id',
+						'tabIndex' => '1',
+						'readonly' => 'readonly'
+					]);
+			}
 		?>
+
 		<?=
 			$form->field($model, 'first_name')
 				->textInput([
