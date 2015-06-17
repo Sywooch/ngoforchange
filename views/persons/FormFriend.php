@@ -61,3 +61,18 @@ $list_marital_status = Normalizer::executeKeyName(ListMaritalStatus::find()->asA
     <?php ActiveForm::end(); ?>
 
 </div><!-- FormFriend -->
+
+<script src="js/jquery.min.js"></script> 
+        <script>
+            $(document).ready(function() {
+                $("#persondatafriend-registered_since").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+            });
+        </script>
+
+        <style>
+        .k-datepicker {
+            height : 30px;
+        }
+        </style>

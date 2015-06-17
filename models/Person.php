@@ -121,7 +121,8 @@ class Person extends ActiveRecord
             'address' => Yii::t('app', 'Address'),
             'post_code' => Yii::t('app', 'Post Code'),
             'city' => Yii::t('app', 'City'),
-            'types' => Yii::t('app', 'Register as')
+            'types' => Yii::t('app', 'Register as'),
+            'selectedTypes' => Yii::t('app', 'Selected Types')
         ];
     }
 

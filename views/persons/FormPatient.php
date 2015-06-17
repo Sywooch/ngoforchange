@@ -32,6 +32,8 @@ var labels = {
     "application_select": "<?= Yii::t('app', 'Select the filled application form') ?>"
 };
 </script>
+<script src="js/jquery.min.js"></script> 
+
 <div class="FormPatient">
 
     <?php $form = ActiveForm::begin(); ?>
@@ -43,7 +45,7 @@ var labels = {
         
         
         <div class="form-group">
-            <label class="control-label" for="person-name">Name</label>
+            <label class="control-label" for="person-name"><?= Yii::t('app', 'Name') ?></label>
             <input type="text" id="person-name" class="form-control" name="person_name" value="<?php
                     echo $person['first_name'];
                     echo ' ';
@@ -84,10 +86,30 @@ var labels = {
         <?= $form->field($model, 'comments')->textarea() ?>
         
         <div class="form-group text-right">
-            <a href="?r=persons/all" class="btn btn-danger">Cancel</a>
+            <a href="?r=persons/all" class="btn btn-danger"><?= Yii::t('app', 'Cancel') ?></a>
             <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
             <?= Html::submitButton(Yii::t('app', 'Create and Continue'), ['class' => 'btn btn-success']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 
 </div><!-- FormPatient -->
+
+        <script>
+            $(document).ready(function() {
+                $("#persondatapatient-birthday").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+                $("#persondatapatient-registered_since").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+                $("#persondatapatient-last_contact").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+            });
+        </script>
+
+        <style>
+        .k-datepicker {
+            height : 30px;
+        }
+        </style>
