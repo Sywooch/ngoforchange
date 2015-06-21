@@ -173,10 +173,15 @@
     	'All events' => '',
 
     	'Username' => '', // NewOne
-    	'Password' => '', // NewOne
+    	'Password' => '1111', // NewOne
     	'Remember Me' => '', // NewOne
     	'Please fill out the following fields to login:' => '', // NewOne
     	
+    	'Profile' => '',
+    	'General Information' => '',
+    	'Contact information' => '',
+    	'Donation information' => '',
+    	'information' => '',
 	];
 ?>
 

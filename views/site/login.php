@@ -1,13 +1,25 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\widgets\Breadcrumbs;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\LoginForm */
 
+echo Breadcrumbs::widget([
+    'itemTemplate' => "<li>{link}</li>\n", // template for all links
+    'homeLink' => [
+        'label' => Yii::t('app', 'Home'),
+        'url' => 'index.php',
+        ],
+    'links' => [
+        Yii::t('app', 'Login'),
+    ],
+]);
+
 $this->title = Yii::t('app', 'Login');
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
