@@ -30,6 +30,7 @@
 		'No' => 'Όχι',
 
 		// field texts - κείμενο πεδίων
+		'Person ID' => '', // NewOne
 		'ID' => 'ΑΜ',
 		'First Name' => 'Όνομα',
 		'Last Name' => 'Επίθετο',
@@ -71,6 +72,7 @@
 		'Tax Registation Number' => '',
 		'Institution Name' => '',
 		'Capacity' => '',
+		'Selected Types' => '', // NewOne
 
 		// medicines part - φάρμακα
 		'Medicines' => 'Φαμακευτικά Σκευάσματα',
@@ -106,6 +108,7 @@
 		'Officials' => 'Επίσημοι',
 		'Register a member' => 'Εγγραφή μέλους',
 		'Register a friend' => 'Εγγραφή φίλου',
+		'Register a patient' => '', // NewOne
 		'Edit the friend' => 'Αλλαγή Στοιχείων Φίλου',
 		'Edit the member' => 'Αλλαγή Στοιχείων Μέλους',
 		'Member registered successfully' => 'Επιτυχής Εγγραφή',
@@ -161,14 +164,24 @@
     	'Select the proof for disability' => '',
     	'Select the filled application form' => '',
 
-    	'Welcome!' => '',
+    	'Welcome!' => 'Καλωσόρισες!',
     	'Welcome EENOSIMS' => '',
     	'Dear visitor please login in order to continue.' => '',
-    	'Login' => '',
+    	'Login' => 'Είσοδος',
     	'Current balance' => '',
     	'Email Subscription' => '',
     	'All events' => '',
+
+    	'Username' => '', // NewOne
+    	'Password' => '1111', // NewOne
+    	'Remember Me' => '', // NewOne
+    	'Please fill out the following fields to login:' => '', // NewOne
     	
+    	'Profile' => '',
+    	'General Information' => '',
+    	'Contact information' => '',
+    	'Donation information' => '',
+    	'information' => '',
 	];
 ?>
 

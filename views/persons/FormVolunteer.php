@@ -64,10 +64,28 @@ var labels = {
         <?= $form->field($model, 'resume')->fileInput() ?>
     
         <div class="form-group text-right">
-            <a href="?r=persons/all" class="btn btn-danger">Cancel</a>
+            <a href="?r=persons/all" class="btn btn-danger"><?= Yii::t('app', 'Cancel') ?></a>
             <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
             <?= Html::submitButton(Yii::t('app', 'Create and Continue'), ['class' => 'btn btn-success']) ?>
         </div>
     <?php ActiveForm::end(); ?>
 
 </div><!-- FormVolunteer -->
+
+<script src="js/jquery.min.js"></script> 
+        <script>
+            $(document).ready(function() {
+                $("#persondatavolunteer-registered_since").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+                $("#persondatavolunteer-birthday").kendoDatePicker({
+                    format: "dd/MM/yyyy"
+                });
+            });
+        </script>
+
+        <style>
+        .k-datepicker {
+            height : 30px;
+        }
+        </style>

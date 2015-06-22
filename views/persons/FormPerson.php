@@ -113,7 +113,7 @@ $this->registerJsFile(
 		?>  	
         
         <div class="form-group text-right">
-        	<a href="?r=persons/all" class="btn btn-danger">Cancel</a>
+        	<a href="?r=persons/all" class="btn btn-danger"><?= Yii::t('app', 'Cancel') ?></a>
         	<?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
             <?= Html::submitButton(Yii::t('app', 'Create and Continue'), ['class' => 'btn btn-success']) ?>
         </div>
