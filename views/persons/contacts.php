@@ -40,3 +40,19 @@ var contactTypeIcons = <?php echo json_encode(Yii::$app->params['contactTypeIcon
 <h3><?= Yii::t('app', 'All contacts') ?></h3>
 <div id="mainGrid">
 </div>
+
+
+<script type="text/x-kendo-template" id="popup_editor">
+	<div class="k-edit-label">
+	    <label for="BrandVariant">Brand Variant</label>
+	</div>
+	<div data-container-for="BrandVariant" class="k-edit-field" style="line-height: 30px;">
+	    #= BrandVariant #
+	</div>
+	<div class="k-edit-label">
+	    <label for="Threshold">Distributor Margin Threshold</label>
+	</div>
+	<div data-container-for="Threshold" class="k-edit-field">
+	    <input type="text" name="Threshold" data-type="number" data-bind="value:Threshold" data-role="numerictextbox" role="spinbutton" class="k-input">
+	</div>
+</script>

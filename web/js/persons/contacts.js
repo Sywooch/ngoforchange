@@ -42,7 +42,25 @@
             },
             schema: {
                 model: {
-                    id: "id"
+                    id: "id",
+                    fields: {
+                        id: {
+                            type: "string"
+                        },
+                        contact_type: {
+                            type: "string"
+                        },
+                        contact_type_icon: {
+                            type: "string"
+                        },
+                        contact_data: {
+                            type: "string"
+                        },
+                        contact_data_2: {
+                            type: "string"                        
+                        },
+                        person: {}
+                    }
                 },
                 data: function(response) {
                     return response.body;
@@ -62,6 +80,7 @@
         },
         editable: {
             mode: "popup",
+            //template: kendo.template($("#popup_editor").html()),
             createAt: "bottom",
             confirmation: labels.grid_confirm_delete,
             confirmDelete: "Yes"
@@ -97,6 +116,7 @@
             title: labels.grid_column_id,
             width: 50,
         }, {
+            field: "contact_type_icon",
             title: "&nbsp;",
             filterable: false,
             width: 32,
@@ -110,6 +130,7 @@
             title: labels.grid_column_data,
             width: 150
         }, {
+            field: "contact_data_2",
             title: labels.grid_column_person,
             width: 250,
             template: '#=window.getPerson(person)#'
