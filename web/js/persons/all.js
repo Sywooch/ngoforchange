@@ -93,20 +93,25 @@
         columns: [{
             command: [{
                 name: "custom_edit",
-                text: labels.grid_button_edit,
+                //text: labels.grid_button_edit,
+                text: '',
                 //template: '<a class="k-button k-grid-edit" onclick="editPerson(this)" style="min-width: 16px;"><span class="k-icon k-edit"></span> ' +  + '</a>',
                 imageClass: 'k-icon k-i-pencil',
-                click: window.editPerson
+                click: window.editPerson,
             }, {
                 name: "destroy",
-                text: labels.grid_button_destroy
+                imageClass: 'k-icon k-i-cancel',
+                //text: labels.grid_button_destroy
+                text: ''
             }, {
                 name: "custom",
-                text: labels.grid_button_preview,
+                imageClass: 'k-icon k-i-search',
+                //text: labels.grid_button_preview,
+                text: '',
                 click: window.showPreview
             }],
             title: "&nbsp;",
-            width: 319
+            width: 240
         }, {
             field: "id",
             title: labels.grid_column_id,
