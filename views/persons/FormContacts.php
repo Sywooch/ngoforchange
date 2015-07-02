@@ -19,15 +19,15 @@ $this->registerJsFile(
 ?>
 <script type="text/javascript">
 var labels = {
+    "grid_button_create": "<?php echo Yii::t('app', 'Create'); ?>",
     "grid_button_edit": "<?php echo Yii::t('app', 'Edit'); ?>",
     "grid_button_destroy": "<?php echo Yii::t('app', 'Delete'); ?>",
-    "grid_button_preview": "<?php echo Yii::t('app', 'Preview'); ?>",
 
     "grid_column_id": "<?php echo Yii::t('app', 'ID'); ?>",
-    "grid_column_fname": "<?php echo Yii::t('app', 'First Name'); ?>",
-    "grid_column_lname": "<?php echo Yii::t('app', 'Last Name'); ?>",
-    "grid_column_types": "<?php echo Yii::t('app', 'Registered as'); ?>",
-    "grid_column_ssrn": "<?php echo Yii::t('app', 'SSRN'); ?>",
+    "grid_column_type": "<?php echo Yii::t('app', 'Category'); ?>",
+    "grid_column_data": "<?php echo Yii::t('app', 'Contact'); ?>",
+    "grid_column_person": "<?php echo Yii::t('app', 'Person'); ?>",
+    
     "grid_column_idnumber": "<?php echo Yii::t('app', 'ID Number'); ?>",
     "grid_column_fathername": "<?php echo Yii::t('app', 'Father Name'); ?>",
     "grid_column_address": "<?php echo Yii::t('app', 'Address'); ?>",
