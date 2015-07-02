@@ -46,13 +46,13 @@ class PersonsController extends Controller
                 'data_table' => 'person',
                 'model_name' => 'Person',
                 'form_name' => 'FormPerson',
-            ], /*[
+            ], [
                 'id' => '',
                 'name' => 'Contact',
                 'data_table' => 'person_contact',
                 'model_name' => 'ContactsList',
                 'form_name' => 'FormContacts',
-            ]*/
+            ]
         ];
         $steps_last = [
                 'id' => '',
@@ -109,10 +109,12 @@ class PersonsController extends Controller
         if($validation_success === false) {
             $model->load($post);
         } else if($validation_success === true) {
-            $find = $classReflect->getMethod('find')->invoke(null);
-            $model_existing = $find->where("person_id = '$person_id'")->asArray()->one();
-            if($model_existing)
-                $model = $model_existing;
+            if($step_data['form_name'] != 'FormContacts') {
+                $find = $classReflect->getMethod('find')->invoke(null);
+                $model_existing = $find->where("person_id = '$person_id'")->asArray()->one();
+                if($model_existing)
+                    $model = $model_existing;    
+            }
         }
 	    
 		// showing form
